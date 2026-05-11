@@ -1,0 +1,73 @@
+services:
+  # Development - Next.js with hot reload
+  app:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile.dev
+    container_name: web1c-app-dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:web1c_secret@db:5432/web1c
+      - REDIS_URL=redis://redis:6379
+      - ONEC_URL=${ONEC_URL:-http://host.docker.internal:8080/hs/odata}
+      - ONEC_USER=${ONEC_USER}
+      - ONEC_PASSWORD=${ONEC_PASSWORD}
+      - JWT_SECRET=dev_jwt_secret_key_for_development_only
+      - APP_URL=http://localhost:3000
+      - UPLOAD_DIR=/app/apps/web/uploads
+    volumes:
+      - ./apps/web:/app/apps/web
+      - ./packages/database:/app/packages/database
+      - ./packages/onec-client:/app/packages/onec-client
+      - app_uploads_dev:/app/apps/web/uploads
+    depends_on:
+      - db
+      - redis
+    networks:
+      - web1c-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # Development - Worker with hot reload
+  worker:
+    build:
+      context: .
+      dockerfile: apps/worker/Dockerfile.dev
+    container_name: web1c-worker-dev
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:web1c_secret@db:5432/web1c
+      - REDIS_URL=redis://redis:6379
+      - ONEC_URL=${ONEC_URL:-http://host.docker.internal:8080/hs/odata}
+      - ONEC_USER=${ONEC_USER}
+      - ONEC_PASSWORD=${ONEC_PASSWORD}
+      - APP_URL=http://app:3000
+      - UPLOAD_DIR=/app/apps/web/uploads
+    volumes:
+      - ./apps/worker:/app/apps/worker
+      - ./packages/database:/app/packages/database
+      - ./packages/onec-client:/app/packages/onec-client
+      - app_uploads_dev:/app/apps/web/uploads
+    depends_on:
+      - db
+      - redis
+    networks:
+      - web1c-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # Database with exposed port for local tools
+  db:
+    ports:
+      - "5432:5432"
+
+  # Redis with exposed port for local tools
+  redis:
+    ports:
+      - "6379:6379"
+
+volumes:
+  app_uploads_dev:
+    driver: local

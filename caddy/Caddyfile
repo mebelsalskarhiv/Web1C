@@ -1,0 +1,38 @@
+# Caddyfile - Reverse Proxy Configuration
+# Routes external traffic to internal services
+
+:80 {
+    # Proxy all API requests to the Next.js app
+    reverse_proxy /api/* app:3000
+    
+    # Proxy WebSocket connections
+    reverse_proxy /ws/* app:3000 {
+        header_up Upgrade {upstream_http_upgrade}
+        header_up Connection {upstream_http_connection}
+    }
+    
+    # Serve static uploads
+    reverse_proxy /uploads/* app:3000
+    
+    # Proxy all other requests to Next.js
+    reverse_proxy app:3000
+    
+    # Enable compression
+    encode gzip zstd
+    
+    # Logging
+    log {
+        output file /var/log/caddy/access.log
+        format json
+    }
+}
+
+# Production configuration example (uncomment and modify for production)
+# your-domain.com {
+#     reverse_proxy /api/* app:3000
+#     reverse_proxy /uploads/* app:3000
+#     reverse_proxy app:3000
+#     
+#     tls your-email@example.com
+#     encode gzip zstd
+# }

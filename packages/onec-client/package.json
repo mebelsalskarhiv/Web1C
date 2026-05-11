@@ -1,0 +1,20 @@
+{
+  "name": "@web1c/onec-client",
+  "version": "1.0.0",
+  "description": "1C:UT 11.5 OData client for synchronization",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "axios-ntlm": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  }
+}

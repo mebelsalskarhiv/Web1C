@@ -1,0 +1,26 @@
+# Development Dockerfile for Worker
+FROM node:20-alpine
+
+RUN apk add --no-cache libc6-compat openssl
+
+WORKDIR /app
+
+# Copy only package.json files (no lock files)
+COPY package.json ./
+COPY apps/worker/package.json ./apps/worker/
+COPY packages/database/package.json ./packages/database/
+COPY packages/onec-client/package.json ./packages/onec-client/
+
+# Install dependencies
+WORKDIR /app
+RUN npm install --legacy-peer-deps || npm install
+
+# Generate Prisma Client
+WORKDIR /app/packages/database
+RUN sh -c "for i in 1 2 3 4 5; do npx prisma generate && exit 0; echo \"prisma generate failed, retry $i/5\"; sleep $((i * 5)); done; exit 1"
+
+WORKDIR /app/apps/worker
+
+ENV NODE_ENV=development
+
+CMD ["npm", "run", "dev"]

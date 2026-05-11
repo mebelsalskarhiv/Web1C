@@ -1,0 +1,35 @@
+{
+  "name": "web1c-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web shop with 1C:UT 11.5 OData integration",
+  "scripts": {
+    "dev": "docker compose -f docker-compose.yml -f docker-compose.dev.yml up",
+    "dev:build": "docker compose -f docker-compose.yml -f docker-compose.dev.yml build",
+    "dev:stop": "docker compose -f docker-compose.yml -f docker-compose.dev.yml down",
+    "build": "docker compose build",
+    "start": "docker compose up -d",
+    "stop": "docker compose down",
+    "logs": "docker compose logs -f",
+    "db:migrate": "docker compose exec app npx prisma migrate dev",
+    "db:generate": "docker compose exec app npx prisma generate",
+    "db:seed": "docker compose exec app npx prisma db seed",
+    "db:studio": "docker compose exec app npx prisma studio",
+    "worker:logs": "docker compose logs -f worker"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@openai/codex": "^0.106.0"
+  }
+}

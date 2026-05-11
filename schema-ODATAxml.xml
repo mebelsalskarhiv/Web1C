@@ -1,0 +1,2201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service xmlns="http://www.w3.org/2007/app"
+		xmlns:atom="http://www.w3.org/2005/Atom"
+		xml:base="http://192.168.1.8/trade2025/odata/standard.odata">
+	<workspace>
+		<atom:title>Default</atom:title>
+		<collection href="AccumulationRegister_ПроцентныеРасходыДисконтирования">
+			<atom:title>AccumulationRegister_ПроцентныеРасходыДисконтирования</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПроцентныеРасходыДисконтирования_RecordType">
+			<atom:title>AccumulationRegister_ПроцентныеРасходыДисконтирования_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДенежныеСредстваУПодотчетныхЛиц">
+			<atom:title>AccumulationRegister_ДенежныеСредстваУПодотчетныхЛиц</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДенежныеСредстваУПодотчетныхЛиц_RecordType">
+			<atom:title>AccumulationRegister_ДенежныеСредстваУПодотчетныхЛиц_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПрочиеРасходы">
+			<atom:title>AccumulationRegister_ПрочиеРасходы</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПрочиеРасходы_RecordType">
+			<atom:title>AccumulationRegister_ПрочиеРасходы_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_ИсторияПодарочныхСертификатов">
+			<atom:title>InformationRegister_ИсторияПодарочныхСертификатов</atom:title>
+		</collection>
+		<collection href="InformationRegister_ИсторияПодарочныхСертификатов_RecordType">
+			<atom:title>InformationRegister_ИсторияПодарочныхСертификатов_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РаспоряженияНаОтгрузку">
+			<atom:title>AccumulationRegister_РаспоряженияНаОтгрузку</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РаспоряженияНаОтгрузку_RecordType">
+			<atom:title>AccumulationRegister_РаспоряженияНаОтгрузку_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСКлиентамиПланОплат">
+			<atom:title>AccumulationRegister_РасчетыСКлиентамиПланОплат</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСКлиентамиПланОплат_RecordType">
+			<atom:title>AccumulationRegister_РасчетыСКлиентамиПланОплат_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_АктивацияПодарочныхСертификатов">
+			<atom:title>InformationRegister_АктивацияПодарочныхСертификатов</atom:title>
+		</collection>
+		<collection href="InformationRegister_АктивацияПодарочныхСертификатов_RecordType">
+			<atom:title>InformationRegister_АктивацияПодарочныхСертификатов_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_ОшибочныеРеквизитыКонтрагентов">
+			<atom:title>InformationRegister_ОшибочныеРеквизитыКонтрагентов</atom:title>
+		</collection>
+		<collection href="InformationRegister_ОшибочныеРеквизитыКонтрагентов_RecordType">
+			<atom:title>InformationRegister_ОшибочныеРеквизитыКонтрагентов_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РезервыТоваровОрганизаций">
+			<atom:title>AccumulationRegister_РезервыТоваровОрганизаций</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РезервыТоваровОрганизаций_RecordType">
+			<atom:title>AccumulationRegister_РезервыТоваровОрганизаций_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСПоставщикамиПланПоставок">
+			<atom:title>AccumulationRegister_РасчетыСПоставщикамиПланПоставок</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСПоставщикамиПланПоставок_RecordType">
+			<atom:title>AccumulationRegister_РасчетыСПоставщикамиПланПоставок_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ВыручкаИСебестоимостьПродаж">
+			<atom:title>AccumulationRegister_ВыручкаИСебестоимостьПродаж</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ВыручкаИСебестоимостьПродаж_RecordType">
+			<atom:title>AccumulationRegister_ВыручкаИСебестоимостьПродаж_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_СуммыДокументовВВалютахУчета">
+			<atom:title>InformationRegister_СуммыДокументовВВалютахУчета</atom:title>
+		</collection>
+		<collection href="InformationRegister_СуммыДокументовВВалютахУчета_RecordType">
+			<atom:title>InformationRegister_СуммыДокументовВВалютахУчета_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ЗапасыИПотребности">
+			<atom:title>AccumulationRegister_ЗапасыИПотребности</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ЗапасыИПотребности_RecordType">
+			<atom:title>AccumulationRegister_ЗапасыИПотребности_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДетализацияПартийТоваровДляНДСиУСН2_4">
+			<atom:title>AccumulationRegister_ДетализацияПартийТоваровДляНДСиУСН2_4</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДетализацияПартийТоваровДляНДСиУСН2_4_RecordType">
+			<atom:title>AccumulationRegister_ДетализацияПартийТоваровДляНДСиУСН2_4_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииРасходовНаСебестоимостьТоваров">
+			<atom:title>AccumulationRegister_ПартииРасходовНаСебестоимостьТоваров</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииРасходовНаСебестоимостьТоваров_RecordType">
+			<atom:title>AccumulationRegister_ПартииРасходовНаСебестоимостьТоваров_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_ИсправленияДокументов">
+			<atom:title>InformationRegister_ИсправленияДокументов</atom:title>
+		</collection>
+		<collection href="InformationRegister_ИсправленияДокументов_RecordType">
+			<atom:title>InformationRegister_ИсправленияДокументов_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПрочиеАктивыПассивы">
+			<atom:title>AccumulationRegister_ПрочиеАктивыПассивы</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПрочиеАктивыПассивы_RecordType">
+			<atom:title>AccumulationRegister_ПрочиеАктивыПассивы_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДенежныеСредстваВКассахККМ">
+			<atom:title>AccumulationRegister_ДенежныеСредстваВКассахККМ</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДенежныеСредстваВКассахККМ_RecordType">
+			<atom:title>AccumulationRegister_ДенежныеСредстваВКассахККМ_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииПроизводственныхЗатрат">
+			<atom:title>AccumulationRegister_ПартииПроизводственныхЗатрат</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииПроизводственныхЗатрат_RecordType">
+			<atom:title>AccumulationRegister_ПартииПроизводственныхЗатрат_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПодарочныеСертификаты">
+			<atom:title>AccumulationRegister_ПодарочныеСертификаты</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПодарочныеСертификаты_RecordType">
+			<atom:title>AccumulationRegister_ПодарочныеСертификаты_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_НДСЗаписиКнигиПродаж">
+			<atom:title>AccumulationRegister_НДСЗаписиКнигиПродаж</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_НДСЗаписиКнигиПродаж_RecordType">
+			<atom:title>AccumulationRegister_НДСЗаписиКнигиПродаж_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_НДСПредъявленный">
+			<atom:title>AccumulationRegister_НДСПредъявленный</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_НДСПредъявленный_RecordType">
+			<atom:title>AccumulationRegister_НДСПредъявленный_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияНоменклатураНоменклатура">
+			<atom:title>AccumulationRegister_ДвиженияНоменклатураНоменклатура</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияНоменклатураНоменклатура_RecordType">
+			<atom:title>AccumulationRegister_ДвиженияНоменклатураНоменклатура_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПрочаяВыручка">
+			<atom:title>AccumulationRegister_ПрочаяВыручка</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПрочаяВыручка_RecordType">
+			<atom:title>AccumulationRegister_ПрочаяВыручка_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыПоФинансовымИнструментам">
+			<atom:title>AccumulationRegister_РасчетыПоФинансовымИнструментам</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыПоФинансовымИнструментам_RecordType">
+			<atom:title>AccumulationRegister_РасчетыПоФинансовымИнструментам_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_ЦеныНоменклатурыПоставщиков">
+			<atom:title>InformationRegister_ЦеныНоменклатурыПоставщиков</atom:title>
+		</collection>
+		<collection href="InformationRegister_ЦеныНоменклатурыПоставщиков_RecordType">
+			<atom:title>InformationRegister_ЦеныНоменклатурыПоставщиков_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ЗаявкиНаВозвратТоваровОтКлиентов">
+			<atom:title>AccumulationRegister_ЗаявкиНаВозвратТоваровОтКлиентов</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ЗаявкиНаВозвратТоваровОтКлиентов_RecordType">
+			<atom:title>AccumulationRegister_ЗаявкиНаВозвратТоваровОтКлиентов_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияДенежныеСредстваДоходыРасходы">
+			<atom:title>AccumulationRegister_ДвиженияДенежныеСредстваДоходыРасходы</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияДенежныеСредстваДоходыРасходы_RecordType">
+			<atom:title>AccumulationRegister_ДвиженияДенежныеСредстваДоходыРасходы_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСКлиентами">
+			<atom:title>AccumulationRegister_РасчетыСКлиентами</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСКлиентами_RecordType">
+			<atom:title>AccumulationRegister_РасчетыСКлиентами_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ЗаказыПоставщикам">
+			<atom:title>AccumulationRegister_ЗаказыПоставщикам</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ЗаказыПоставщикам_RecordType">
+			<atom:title>AccumulationRegister_ЗаказыПоставщикам_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияДенежныеСредстваКонтрагент">
+			<atom:title>AccumulationRegister_ДвиженияДенежныеСредстваКонтрагент</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияДенежныеСредстваКонтрагент_RecordType">
+			<atom:title>AccumulationRegister_ДвиженияДенежныеСредстваКонтрагент_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияДоходыРасходыПрочиеАктивыПассивы">
+			<atom:title>AccumulationRegister_ДвиженияДоходыРасходыПрочиеАктивыПассивы</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияДоходыРасходыПрочиеАктивыПассивы_RecordType">
+			<atom:title>AccumulationRegister_ДвиженияДоходыРасходыПрочиеАктивыПассивы_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_НДСЗаписиКнигиПокупок">
+			<atom:title>AccumulationRegister_НДСЗаписиКнигиПокупок</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_НДСЗаписиКнигиПокупок_RecordType">
+			<atom:title>AccumulationRegister_НДСЗаписиКнигиПокупок_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_НДСАвансыВыданные">
+			<atom:title>AccumulationRegister_НДСАвансыВыданные</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_НДСАвансыВыданные_RecordType">
+			<atom:title>AccumulationRegister_НДСАвансыВыданные_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_ЦеныНоменклатуры25">
+			<atom:title>InformationRegister_ЦеныНоменклатуры25</atom:title>
+		</collection>
+		<collection href="InformationRegister_ЦеныНоменклатуры25_RecordType">
+			<atom:title>InformationRegister_ЦеныНоменклатуры25_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПереданнаяВозвратнаяТара">
+			<atom:title>AccumulationRegister_ПереданнаяВозвратнаяТара</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПереданнаяВозвратнаяТара_RecordType">
+			<atom:title>AccumulationRegister_ПереданнаяВозвратнаяТара_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияПоПрочимАктивамПассивам">
+			<atom:title>AccumulationRegister_ДвиженияПоПрочимАктивамПассивам</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияПоПрочимАктивамПассивам_RecordType">
+			<atom:title>AccumulationRegister_ДвиженияПоПрочимАктивамПассивам_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_ДанныеОснованийСчетовФактур">
+			<atom:title>InformationRegister_ДанныеОснованийСчетовФактур</atom:title>
+		</collection>
+		<collection href="InformationRegister_ДанныеОснованийСчетовФактур_RecordType">
+			<atom:title>InformationRegister_ДанныеОснованийСчетовФактур_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_ЖурналУчетаСчетовФактур">
+			<atom:title>InformationRegister_ЖурналУчетаСчетовФактур</atom:title>
+		</collection>
+		<collection href="InformationRegister_ЖурналУчетаСчетовФактур_RecordType">
+			<atom:title>InformationRegister_ЖурналУчетаСчетовФактур_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_НДССостояниеРеализации0">
+			<atom:title>InformationRegister_НДССостояниеРеализации0</atom:title>
+		</collection>
+		<collection href="InformationRegister_НДССостояниеРеализации0_RecordType">
+			<atom:title>InformationRegister_НДССостояниеРеализации0_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_СтоимостьТоваров">
+			<atom:title>InformationRegister_СтоимостьТоваров</atom:title>
+		</collection>
+		<collection href="InformationRegister_СтоимостьТоваров_RecordType">
+			<atom:title>InformationRegister_СтоимостьТоваров_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_УсловияЗакупок">
+			<atom:title>InformationRegister_УсловияЗакупок</atom:title>
+		</collection>
+		<collection href="InformationRegister_УсловияЗакупок_RecordType">
+			<atom:title>InformationRegister_УсловияЗакупок_RecordType</atom:title>
+		</collection>
+		<collection href="InformationRegister_ЦеныНоменклатуры">
+			<atom:title>InformationRegister_ЦеныНоменклатуры</atom:title>
+		</collection>
+		<collection href="InformationRegister_ЦеныНоменклатуры_RecordType">
+			<atom:title>InformationRegister_ЦеныНоменклатуры_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_УдалитьЗаказыКлиентов">
+			<atom:title>AccumulationRegister_УдалитьЗаказыКлиентов</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_УдалитьЗаказыКлиентов_RecordType">
+			<atom:title>AccumulationRegister_УдалитьЗаказыКлиентов_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияДенежныхСредств">
+			<atom:title>AccumulationRegister_ДвиженияДенежныхСредств</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияДенежныхСредств_RecordType">
+			<atom:title>AccumulationRegister_ДвиженияДенежныхСредств_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияНоменклатураДоходыРасходы">
+			<atom:title>AccumulationRegister_ДвиженияНоменклатураДоходыРасходы</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияНоменклатураДоходыРасходы_RecordType">
+			<atom:title>AccumulationRegister_ДвиженияНоменклатураДоходыРасходы_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияКонтрагентДоходыРасходы">
+			<atom:title>AccumulationRegister_ДвиженияКонтрагентДоходыРасходы</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияКонтрагентДоходыРасходы_RecordType">
+			<atom:title>AccumulationRegister_ДвиженияКонтрагентДоходыРасходы_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияКонтрагентКонтрагент">
+			<atom:title>AccumulationRegister_ДвиженияКонтрагентКонтрагент</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияКонтрагентКонтрагент_RecordType">
+			<atom:title>AccumulationRegister_ДвиженияКонтрагентКонтрагент_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияПоНДС">
+			<atom:title>AccumulationRegister_ДвиженияПоНДС</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДвиженияПоНДС_RecordType">
+			<atom:title>AccumulationRegister_ДвиженияПоНДС_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДенежныеСредстваБезналичные">
+			<atom:title>AccumulationRegister_ДенежныеСредстваБезналичные</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДенежныеСредстваБезналичные_RecordType">
+			<atom:title>AccumulationRegister_ДенежныеСредстваБезналичные_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДенежныеСредстваНаличные">
+			<atom:title>AccumulationRegister_ДенежныеСредстваНаличные</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДенежныеСредстваНаличные_RecordType">
+			<atom:title>AccumulationRegister_ДенежныеСредстваНаличные_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДенежныеСредстваВПути">
+			<atom:title>AccumulationRegister_ДенежныеСредстваВПути</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДенежныеСредстваВПути_RecordType">
+			<atom:title>AccumulationRegister_ДенежныеСредстваВПути_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДетализацияПартийТоваровДляНДСиУСН">
+			<atom:title>AccumulationRegister_ДетализацияПартийТоваровДляНДСиУСН</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ДетализацияПартийТоваровДляНДСиУСН_RecordType">
+			<atom:title>AccumulationRegister_ДетализацияПартийТоваровДляНДСиУСН_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ЗаказыНаВнутреннееПотребление">
+			<atom:title>AccumulationRegister_ЗаказыНаВнутреннееПотребление</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ЗаказыНаВнутреннееПотребление_RecordType">
+			<atom:title>AccumulationRegister_ЗаказыНаВнутреннееПотребление_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_Закупки">
+			<atom:title>AccumulationRegister_Закупки</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_Закупки_RecordType">
+			<atom:title>AccumulationRegister_Закупки_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_КорректировкиПлановыхПотребностей">
+			<atom:title>AccumulationRegister_КорректировкиПлановыхПотребностей</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_КорректировкиПлановыхПотребностей_RecordType">
+			<atom:title>AccumulationRegister_КорректировкиПлановыхПотребностей_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_МатериалыИРаботыВПроизводстве">
+			<atom:title>AccumulationRegister_МатериалыИРаботыВПроизводстве</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_МатериалыИРаботыВПроизводстве_RecordType">
+			<atom:title>AccumulationRegister_МатериалыИРаботыВПроизводстве_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_НДСАвансыПолученные">
+			<atom:title>AccumulationRegister_НДСАвансыПолученные</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_НДСАвансыПолученные_RecordType">
+			<atom:title>AccumulationRegister_НДСАвансыПолученные_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ОтклоненияВСтоимостиТоваров">
+			<atom:title>AccumulationRegister_ОтклоненияВСтоимостиТоваров</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ОтклоненияВСтоимостиТоваров_RecordType">
+			<atom:title>AccumulationRegister_ОтклоненияВСтоимостиТоваров_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииЗатратНаВыпуск">
+			<atom:title>AccumulationRegister_ПартииЗатратНаВыпуск</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииЗатратНаВыпуск_RecordType">
+			<atom:title>AccumulationRegister_ПартииЗатратНаВыпуск_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииНДСКРаспределению">
+			<atom:title>AccumulationRegister_ПартииНДСКРаспределению</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииНДСКРаспределению_RecordType">
+			<atom:title>AccumulationRegister_ПартииНДСКРаспределению_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииПрочихРасходов">
+			<atom:title>AccumulationRegister_ПартииПрочихРасходов</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииПрочихРасходов_RecordType">
+			<atom:title>AccumulationRegister_ПартииПрочихРасходов_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииТоваровОрганизаций">
+			<atom:title>AccumulationRegister_ПартииТоваровОрганизаций</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииТоваровОрганизаций_RecordType">
+			<atom:title>AccumulationRegister_ПартииТоваровОрганизаций_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииТоваровПереданныеНаКомиссию">
+			<atom:title>AccumulationRegister_ПартииТоваровПереданныеНаКомиссию</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПартииТоваровПереданныеНаКомиссию_RecordType">
+			<atom:title>AccumulationRegister_ПартииТоваровПереданныеНаКомиссию_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыПереданныеНаКомиссию">
+			<atom:title>AccumulationRegister_ТоварыПереданныеНаКомиссию</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыПереданныеНаКомиссию_RecordType">
+			<atom:title>AccumulationRegister_ТоварыПереданныеНаКомиссию_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСПоставщикамиПланОплат">
+			<atom:title>AccumulationRegister_РасчетыСПоставщикамиПланОплат</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСПоставщикамиПланОплат_RecordType">
+			<atom:title>AccumulationRegister_РасчетыСПоставщикамиПланОплат_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыОрганизаций">
+			<atom:title>AccumulationRegister_ТоварыОрганизаций</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыОрганизаций_RecordType">
+			<atom:title>AccumulationRegister_ТоварыОрганизаций_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСКлиентамиПоСрокам">
+			<atom:title>AccumulationRegister_РасчетыСКлиентамиПоСрокам</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСКлиентамиПоСрокам_RecordType">
+			<atom:title>AccumulationRegister_РасчетыСКлиентамиПоСрокам_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСКлиентамиПланОтгрузок">
+			<atom:title>AccumulationRegister_РасчетыСКлиентамиПланОтгрузок</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСКлиентамиПланОтгрузок_RecordType">
+			<atom:title>AccumulationRegister_РасчетыСКлиентамиПланОтгрузок_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПланыОстатков">
+			<atom:title>AccumulationRegister_ПланыОстатков</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПланыОстатков_RecordType">
+			<atom:title>AccumulationRegister_ПланыОстатков_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПринятаяВозвратнаяТара">
+			<atom:title>AccumulationRegister_ПринятаяВозвратнаяТара</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПринятаяВозвратнаяТара_RecordType">
+			<atom:title>AccumulationRegister_ПринятаяВозвратнаяТара_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПрослеживаемыеТоварыОтгруженныеВЕАЭС">
+			<atom:title>AccumulationRegister_ПрослеживаемыеТоварыОтгруженныеВЕАЭС</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПрослеживаемыеТоварыОтгруженныеВЕАЭС_RecordType">
+			<atom:title>AccumulationRegister_ПрослеживаемыеТоварыОтгруженныеВЕАЭС_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПрочиеДоходы">
+			<atom:title>AccumulationRegister_ПрочиеДоходы</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ПрочиеДоходы_RecordType">
+			<atom:title>AccumulationRegister_ПрочиеДоходы_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСКлиентамиПоДокументам">
+			<atom:title>AccumulationRegister_РасчетыСКлиентамиПоДокументам</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСКлиентамиПоДокументам_RecordType">
+			<atom:title>AccumulationRegister_РасчетыСКлиентамиПоДокументам_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСПоставщиками">
+			<atom:title>AccumulationRegister_РасчетыСПоставщиками</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСПоставщиками_RecordType">
+			<atom:title>AccumulationRegister_РасчетыСПоставщиками_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСПоставщикамиПоДокументам">
+			<atom:title>AccumulationRegister_РасчетыСПоставщикамиПоДокументам</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСПоставщикамиПоДокументам_RecordType">
+			<atom:title>AccumulationRegister_РасчетыСПоставщикамиПоДокументам_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСПоставщикамиПоСрокам">
+			<atom:title>AccumulationRegister_РасчетыСПоставщикамиПоСрокам</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_РасчетыСПоставщикамиПоСрокам_RecordType">
+			<atom:title>AccumulationRegister_РасчетыСПоставщикамиПоСрокам_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_СебестоимостьТоваров">
+			<atom:title>AccumulationRegister_СебестоимостьТоваров</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_СебестоимостьТоваров_RecordType">
+			<atom:title>AccumulationRegister_СебестоимостьТоваров_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыВЯчейках">
+			<atom:title>AccumulationRegister_ТоварыВЯчейках</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыВЯчейках_RecordType">
+			<atom:title>AccumulationRegister_ТоварыВЯчейках_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыКОтбору">
+			<atom:title>AccumulationRegister_ТоварыКОтбору</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыКОтбору_RecordType">
+			<atom:title>AccumulationRegister_ТоварыКОтбору_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыКОтгрузке">
+			<atom:title>AccumulationRegister_ТоварыКОтгрузке</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыКОтгрузке_RecordType">
+			<atom:title>AccumulationRegister_ТоварыКОтгрузке_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыКОформлениюИзлишковНедостач">
+			<atom:title>AccumulationRegister_ТоварыКОформлениюИзлишковНедостач</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыКОформлениюИзлишковНедостач_RecordType">
+			<atom:title>AccumulationRegister_ТоварыКОформлениюИзлишковНедостач_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыКОформлениюОтчетовКомитенту">
+			<atom:title>AccumulationRegister_ТоварыКОформлениюОтчетовКомитенту</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыКОформлениюОтчетовКомитенту_RecordType">
+			<atom:title>AccumulationRegister_ТоварыКОформлениюОтчетовКомитенту_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыКПоступлению">
+			<atom:title>AccumulationRegister_ТоварыКПоступлению</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыКПоступлению_RecordType">
+			<atom:title>AccumulationRegister_ТоварыКПоступлению_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыНаСкладах">
+			<atom:title>AccumulationRegister_ТоварыНаСкладах</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыНаСкладах_RecordType">
+			<atom:title>AccumulationRegister_ТоварыНаСкладах_RecordType</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыОрганизацийКПередаче">
+			<atom:title>AccumulationRegister_ТоварыОрганизацийКПередаче</atom:title>
+		</collection>
+		<collection href="AccumulationRegister_ТоварыОрганизацийКПередаче_RecordType">
+			<atom:title>AccumulationRegister_ТоварыОрганизацийКПередаче_RecordType</atom:title>
+		</collection>
+		<collection href="Catalog_БанковскиеСчетаКонтрагентов">
+			<atom:title>Catalog_БанковскиеСчетаКонтрагентов</atom:title>
+		</collection>
+		<collection href="Catalog_БанковскиеСчетаОрганизаций">
+			<atom:title>Catalog_БанковскиеСчетаОрганизаций</atom:title>
+		</collection>
+		<collection href="Catalog_БанковскиеСчетаОрганизаций_ДополнительныеРеквизиты">
+			<atom:title>Catalog_БанковскиеСчетаОрганизаций_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_Валюты">
+			<atom:title>Catalog_Валюты</atom:title>
+		</collection>
+		<collection href="Catalog_Валюты_Представления">
+			<atom:title>Catalog_Валюты_Представления</atom:title>
+		</collection>
+		<collection href="Catalog_ВерсииФайлов">
+			<atom:title>Catalog_ВерсииФайлов</atom:title>
+		</collection>
+		<collection href="Catalog_ВерсииФайлов_УдалитьЭлектронныеПодписи">
+			<atom:title>Catalog_ВерсииФайлов_УдалитьЭлектронныеПодписи</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыДокументовФизическихЛиц">
+			<atom:title>Catalog_ВидыДокументовФизическихЛиц</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыДокументовФизическихЛиц_ДополнительныеРеквизиты">
+			<atom:title>Catalog_ВидыДокументовФизическихЛиц_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыЗапасов">
+			<atom:title>Catalog_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковТоваров">
+			<atom:title>Document_ВводОстатковТоваров</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковТоваров_Товары">
+			<atom:title>Document_ВводОстатковТоваров_Товары</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковТоваров_Серии">
+			<atom:title>Document_ВводОстатковТоваров_Серии</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковТоваров_ДетализацияПартий">
+			<atom:title>Document_ВводОстатковТоваров_ДетализацияПартий</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыКонтактнойИнформации">
+			<atom:title>Catalog_ВидыКонтактнойИнформации</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыКонтактнойИнформации_Представления">
+			<atom:title>Catalog_ВидыКонтактнойИнформации_Представления</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыНалоговВзносов">
+			<atom:title>Catalog_ВидыНалоговВзносов</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыНоменклатуры">
+			<atom:title>Catalog_ВидыНоменклатуры</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыНоменклатуры_РеквизитыДляКонтроляНоменклатуры">
+			<atom:title>Catalog_ВидыНоменклатуры_РеквизитыДляКонтроляНоменклатуры</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыНоменклатуры_РеквизитыДляКонтроляХарактеристик">
+			<atom:title>Catalog_ВидыНоменклатуры_РеквизитыДляКонтроляХарактеристик</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыНоменклатуры_РеквизитыДляКонтроляСерий">
+			<atom:title>Catalog_ВидыНоменклатуры_РеквизитыДляКонтроляСерий</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыНоменклатуры_РеквизитыБыстрогоОтбораНоменклатуры">
+			<atom:title>Catalog_ВидыНоменклатуры_РеквизитыБыстрогоОтбораНоменклатуры</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыНоменклатуры_РеквизитыБыстрогоОтбораХарактеристик">
+			<atom:title>Catalog_ВидыНоменклатуры_РеквизитыБыстрогоОтбораХарактеристик</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыНоменклатуры_ПолитикиУчетаСерий">
+			<atom:title>Catalog_ВидыНоменклатуры_ПолитикиУчетаСерий</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыНоменклатуры_РеквизитыХарактеристикДляКлючаЦен">
+			<atom:title>Catalog_ВидыНоменклатуры_РеквизитыХарактеристикДляКлючаЦен</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыНоменклатуры_РеквизитыСерийДляКлючаЦен">
+			<atom:title>Catalog_ВидыНоменклатуры_РеквизитыСерийДляКлючаЦен</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыЦен">
+			<atom:title>Catalog_ВидыЦен</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыЦен_ВлияющиеВидыЦен">
+			<atom:title>Catalog_ВидыЦен_ВлияющиеВидыЦен</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыЦен_ЦеновыеГруппы">
+			<atom:title>Catalog_ВидыЦен_ЦеновыеГруппы</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыЦен_ПравилаОкругленияЦены">
+			<atom:title>Catalog_ВидыЦен_ПравилаОкругленияЦены</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыЦен_ПорогиСрабатывания">
+			<atom:title>Catalog_ВидыЦен_ПорогиСрабатывания</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыЦен_ДополнительныеРеквизиты">
+			<atom:title>Catalog_ВидыЦен_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыЦен_Валюты">
+			<atom:title>Catalog_ВидыЦен_Валюты</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыЦенПоставщиков">
+			<atom:title>Catalog_ВидыЦенПоставщиков</atom:title>
+		</collection>
+		<collection href="Catalog_ВидыЦенПоставщиков_ДополнительныеРеквизиты">
+			<atom:title>Catalog_ВидыЦенПоставщиков_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_Пользователи">
+			<atom:title>Catalog_Пользователи</atom:title>
+		</collection>
+		<collection href="Catalog_Пользователи_ДополнительныеРеквизиты">
+			<atom:title>Catalog_Пользователи_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_Пользователи_КонтактнаяИнформация">
+			<atom:title>Catalog_Пользователи_КонтактнаяИнформация</atom:title>
+		</collection>
+		<collection href="Catalog_Календари">
+			<atom:title>Catalog_Календари</atom:title>
+		</collection>
+		<collection href="Catalog_Календари_ШаблонЗаполнения">
+			<atom:title>Catalog_Календари_ШаблонЗаполнения</atom:title>
+		</collection>
+		<collection href="Catalog_Календари_РасписаниеРаботы">
+			<atom:title>Catalog_Календари_РасписаниеРаботы</atom:title>
+		</collection>
+		<collection href="Catalog_ГруппыДоступаФизическихЛиц">
+			<atom:title>Catalog_ГруппыДоступаФизическихЛиц</atom:title>
+		</collection>
+		<collection href="Catalog_ГруппыФинансовогоУчетаДенежныхСредств">
+			<atom:title>Catalog_ГруппыФинансовогоУчетаДенежныхСредств</atom:title>
+		</collection>
+		<collection href="Catalog_ДоговорыКонтрагентов">
+			<atom:title>Catalog_ДоговорыКонтрагентов</atom:title>
+		</collection>
+		<collection href="Catalog_ДоговорыКонтрагентов_ДоговорыСЗаказчиками">
+			<atom:title>Catalog_ДоговорыКонтрагентов_ДоговорыСЗаказчиками</atom:title>
+		</collection>
+		<collection href="Catalog_ДоговорыКонтрагентов_ПодтверждающиеДокументы">
+			<atom:title>Catalog_ДоговорыКонтрагентов_ПодтверждающиеДокументы</atom:title>
+		</collection>
+		<collection href="Catalog_ДоговорыКонтрагентов_ДополнительныеРеквизиты">
+			<atom:title>Catalog_ДоговорыКонтрагентов_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_ДоговорыКонтрагентов_Филиалы">
+			<atom:title>Catalog_ДоговорыКонтрагентов_Филиалы</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураПолученныйАванс">
+			<atom:title>Document_СчетФактураПолученныйАванс</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураПолученныйАванс_Авансы">
+			<atom:title>Document_СчетФактураПолученныйАванс_Авансы</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураПолученныйАванс_Продавцы">
+			<atom:title>Document_СчетФактураПолученныйАванс_Продавцы</atom:title>
+		</collection>
+		<collection href="Catalog_ЗначенияСвойствОбъектов">
+			<atom:title>Catalog_ЗначенияСвойствОбъектов</atom:title>
+		</collection>
+		<collection href="Catalog_ЗначенияСвойствОбъектов_Представления">
+			<atom:title>Catalog_ЗначенияСвойствОбъектов_Представления</atom:title>
+		</collection>
+		<collection href="Catalog_ПравилаРаспределенияРасходов">
+			<atom:title>Catalog_ПравилаРаспределенияРасходов</atom:title>
+		</collection>
+		<collection href="Catalog_ПравилаРаспределенияРасходов_НаправленияДеятельности">
+			<atom:title>Catalog_ПравилаРаспределенияРасходов_НаправленияДеятельности</atom:title>
+		</collection>
+		<collection href="Catalog_ПравилаРаспределенияРасходов_ОтборПоНаправлениямДеятельности">
+			<atom:title>Catalog_ПравилаРаспределенияРасходов_ОтборПоНаправлениямДеятельности</atom:title>
+		</collection>
+		<collection href="Catalog_ЗначенияСвойствОбъектовИерархия">
+			<atom:title>Catalog_ЗначенияСвойствОбъектовИерархия</atom:title>
+		</collection>
+		<collection href="Catalog_ЗначенияСвойствОбъектовИерархия_Представления">
+			<atom:title>Catalog_ЗначенияСвойствОбъектовИерархия_Представления</atom:title>
+		</collection>
+		<collection href="Catalog_ДополнительныеОтчетыИОбработки">
+			<atom:title>Catalog_ДополнительныеОтчетыИОбработки</atom:title>
+		</collection>
+		<collection href="Catalog_ДополнительныеОтчетыИОбработки_Команды">
+			<atom:title>Catalog_ДополнительныеОтчетыИОбработки_Команды</atom:title>
+		</collection>
+		<collection href="Catalog_ДополнительныеОтчетыИОбработки_Назначение">
+			<atom:title>Catalog_ДополнительныеОтчетыИОбработки_Назначение</atom:title>
+		</collection>
+		<collection href="Catalog_ДополнительныеОтчетыИОбработки_Разделы">
+			<atom:title>Catalog_ДополнительныеОтчетыИОбработки_Разделы</atom:title>
+		</collection>
+		<collection href="Catalog_ДополнительныеОтчетыИОбработки_Разрешения">
+			<atom:title>Catalog_ДополнительныеОтчетыИОбработки_Разрешения</atom:title>
+		</collection>
+		<collection href="Catalog_ДополнительныеОтчетыИОбработки_ДополнительныеРеквизиты">
+			<atom:title>Catalog_ДополнительныеОтчетыИОбработки_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_ИдентификаторыОбъектовРасширений">
+			<atom:title>Catalog_ИдентификаторыОбъектовРасширений</atom:title>
+		</collection>
+		<collection href="Catalog_ДрайверыОборудования">
+			<atom:title>Catalog_ДрайверыОборудования</atom:title>
+		</collection>
+		<collection href="Catalog_ЗоныДоставки">
+			<atom:title>Catalog_ЗоныДоставки</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаНалогообложенияНДСПартийТоваров">
+			<atom:title>Document_КорректировкаНалогообложенияНДСПартийТоваров</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаНалогообложенияНДСПартийТоваров_ВидыЗапасов">
+			<atom:title>Document_КорректировкаНалогообложенияНДСПартийТоваров_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Catalog_ИдентификаторыОбъектовМетаданных">
+			<atom:title>Catalog_ИдентификаторыОбъектовМетаданных</atom:title>
+		</collection>
+		<collection href="Catalog_КассовыеКниги">
+			<atom:title>Catalog_КассовыеКниги</atom:title>
+		</collection>
+		<collection href="Catalog_Кассы">
+			<atom:title>Catalog_Кассы</atom:title>
+		</collection>
+		<collection href="Catalog_Кассы_ПолучателиПлатежейПриПеремещенииДС">
+			<atom:title>Catalog_Кассы_ПолучателиПлатежейПриПеремещенииДС</atom:title>
+		</collection>
+		<collection href="Catalog_Кассы_ДополнительныеРеквизиты">
+			<atom:title>Catalog_Кассы_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_КассыККМ">
+			<atom:title>Catalog_КассыККМ</atom:title>
+		</collection>
+		<collection href="Catalog_КассыККМ_ДополнительныеРеквизиты">
+			<atom:title>Catalog_КассыККМ_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_КлассификаторОКВЭД2">
+			<atom:title>Catalog_КлассификаторОКВЭД2</atom:title>
+		</collection>
+		<collection href="Catalog_КлассификаторОКПД2">
+			<atom:title>Catalog_КлассификаторОКПД2</atom:title>
+		</collection>
+		<collection href="Catalog_КлючиАналитикиУчетаНаборов">
+			<atom:title>Catalog_КлючиАналитикиУчетаНаборов</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураНаНеподтвержденнуюРеализацию0">
+			<atom:title>Document_СчетФактураНаНеподтвержденнуюРеализацию0</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураНаНеподтвержденнуюРеализацию0_Товары">
+			<atom:title>Document_СчетФактураНаНеподтвержденнуюРеализацию0_Товары</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураНаНеподтвержденнуюРеализацию0_ПлатежноРасчетныеДокументы">
+			<atom:title>Document_СчетФактураНаНеподтвержденнуюРеализацию0_ПлатежноРасчетныеДокументы</atom:title>
+		</collection>
+		<collection href="Catalog_КлючиАналитикиУчетаНоменклатуры">
+			<atom:title>Catalog_КлючиАналитикиУчетаНоменклатуры</atom:title>
+		</collection>
+		<collection href="Document_РасчетПроцентныхРасходовДисконтирования">
+			<atom:title>Document_РасчетПроцентныхРасходовДисконтирования</atom:title>
+		</collection>
+		<collection href="Catalog_КлючиАналитикиУчетаПартий">
+			<atom:title>Catalog_КлючиАналитикиУчетаПартий</atom:title>
+		</collection>
+		<collection href="Catalog_КлючиАналитикиУчетаПоПартнерам">
+			<atom:title>Catalog_КлючиАналитикиУчетаПоПартнерам</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_КомандыПечати">
+			<atom:title>Catalog_аллегро_КомандыПечати</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_КомандыПечати_СопоставлениеРеквизитов">
+			<atom:title>Catalog_аллегро_КомандыПечати_СопоставлениеРеквизитов</atom:title>
+		</collection>
+		<collection href="Catalog_КонтактныеЛицаПартнеров">
+			<atom:title>Catalog_КонтактныеЛицаПартнеров</atom:title>
+		</collection>
+		<collection href="Catalog_КонтактныеЛицаПартнеров_КонтактнаяИнформация">
+			<atom:title>Catalog_КонтактныеЛицаПартнеров_КонтактнаяИнформация</atom:title>
+		</collection>
+		<collection href="Catalog_КонтактныеЛицаПартнеров_РолиКонтактногоЛица">
+			<atom:title>Catalog_КонтактныеЛицаПартнеров_РолиКонтактногоЛица</atom:title>
+		</collection>
+		<collection href="Catalog_КонтактныеЛицаПартнеров_ДополнительныеРеквизиты">
+			<atom:title>Catalog_КонтактныеЛицаПартнеров_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_Контрагенты">
+			<atom:title>Catalog_Контрагенты</atom:title>
+		</collection>
+		<collection href="Catalog_Контрагенты_КонтактнаяИнформация">
+			<atom:title>Catalog_Контрагенты_КонтактнаяИнформация</atom:title>
+		</collection>
+		<collection href="Catalog_Контрагенты_ДополнительныеРеквизиты">
+			<atom:title>Catalog_Контрагенты_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_Контрагенты_ИсторияКПП">
+			<atom:title>Catalog_Контрагенты_ИсторияКПП</atom:title>
+		</collection>
+		<collection href="Catalog_Контрагенты_ИсторияНаименований">
+			<atom:title>Catalog_Контрагенты_ИсторияНаименований</atom:title>
+		</collection>
+		<collection href="Catalog_Марки">
+			<atom:title>Catalog_Марки</atom:title>
+		</collection>
+		<collection href="Catalog_НоменклатураПрисоединенныеФайлы">
+			<atom:title>Catalog_НоменклатураПрисоединенныеФайлы</atom:title>
+		</collection>
+		<collection href="Catalog_МашиночитаемыеДоверенности">
+			<atom:title>Catalog_МашиночитаемыеДоверенности</atom:title>
+		</collection>
+		<collection href="Catalog_МашиночитаемыеДоверенности_Доверители">
+			<atom:title>Catalog_МашиночитаемыеДоверенности_Доверители</atom:title>
+		</collection>
+		<collection href="Catalog_МашиночитаемыеДоверенности_Представители">
+			<atom:title>Catalog_МашиночитаемыеДоверенности_Представители</atom:title>
+		</collection>
+		<collection href="Catalog_МашиночитаемыеДоверенности_Полномочия">
+			<atom:title>Catalog_МашиночитаемыеДоверенности_Полномочия</atom:title>
+		</collection>
+		<collection href="Catalog_МашиночитаемыеДоверенности_Ограничения">
+			<atom:title>Catalog_МашиночитаемыеДоверенности_Ограничения</atom:title>
+		</collection>
+		<collection href="Catalog_МашиночитаемыеДоверенности_НалоговыеОрганыДействия">
+			<atom:title>Catalog_МашиночитаемыеДоверенности_НалоговыеОрганыДействия</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_МобильныеУстройства">
+			<atom:title>Catalog_аллегро_МобильныеУстройства</atom:title>
+		</collection>
+		<collection href="Catalog_НаборыДополнительныхРеквизитовИСведений">
+			<atom:title>Catalog_НаборыДополнительныхРеквизитовИСведений</atom:title>
+		</collection>
+		<collection href="Catalog_НаборыДополнительныхРеквизитовИСведений_ДополнительныеРеквизиты">
+			<atom:title>Catalog_НаборыДополнительныхРеквизитовИСведений_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_НаборыДополнительныхРеквизитовИСведений_ДополнительныеСведения">
+			<atom:title>Catalog_НаборыДополнительныхРеквизитовИСведений_ДополнительныеСведения</atom:title>
+		</collection>
+		<collection href="Catalog_НаборыДополнительныхРеквизитовИСведений_Представления">
+			<atom:title>Catalog_НаборыДополнительныхРеквизитовИСведений_Представления</atom:title>
+		</collection>
+		<collection href="Catalog_НаборыУпаковок">
+			<atom:title>Catalog_НаборыУпаковок</atom:title>
+		</collection>
+		<collection href="Catalog_УчетныеЗаписиЭлектроннойПочты">
+			<atom:title>Catalog_УчетныеЗаписиЭлектроннойПочты</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковНДСПредъявленного">
+			<atom:title>Document_ВводОстатковНДСПредъявленного</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковНДСПредъявленного_НДСПредъявленный">
+			<atom:title>Document_ВводОстатковНДСПредъявленного_НДСПредъявленный</atom:title>
+		</collection>
+		<collection href="Catalog_Номенклатура">
+			<atom:title>Catalog_Номенклатура</atom:title>
+		</collection>
+		<collection href="Catalog_Номенклатура_ДополнительныеРеквизиты">
+			<atom:title>Catalog_Номенклатура_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_Номенклатура_ДрагоценныеМатериалы">
+			<atom:title>Catalog_Номенклатура_ДрагоценныеМатериалы</atom:title>
+		</collection>
+		<collection href="Catalog_Номенклатура_Представления">
+			<atom:title>Catalog_Номенклатура_Представления</atom:title>
+		</collection>
+		<collection href="Document_СписаниеБезналичныхДенежныхСредств">
+			<atom:title>Document_СписаниеБезналичныхДенежныхСредств</atom:title>
+		</collection>
+		<collection href="Document_СписаниеБезналичныхДенежныхСредств_РасшифровкаПлатежа">
+			<atom:title>Document_СписаниеБезналичныхДенежныхСредств_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_СписаниеБезналичныхДенежныхСредств_ЛицевыеСчетаСотрудников">
+			<atom:title>Document_СписаниеБезналичныхДенежныхСредств_ЛицевыеСчетаСотрудников</atom:title>
+		</collection>
+		<collection href="Document_СписаниеБезналичныхДенежныхСредств_ИнструкцииБанку">
+			<atom:title>Document_СписаниеБезналичныхДенежныхСредств_ИнструкцииБанку</atom:title>
+		</collection>
+		<collection href="Document_СписаниеБезналичныхДенежныхСредств_ДополнительныеРеквизиты">
+			<atom:title>Document_СписаниеБезналичныхДенежныхСредств_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_СписаниеБезналичныхДенежныхСредств_БанковскиеСчетаСпискаКонтрагентов">
+			<atom:title>Document_СписаниеБезналичныхДенежныхСредств_БанковскиеСчетаСпискаКонтрагентов</atom:title>
+		</collection>
+		<collection href="Catalog_НоменклатураКонтрагентов">
+			<atom:title>Catalog_НоменклатураКонтрагентов</atom:title>
+		</collection>
+		<collection href="Catalog_НоменклатураКонтрагентов_ДругиеШтрихкодыНоменклатуры">
+			<atom:title>Catalog_НоменклатураКонтрагентов_ДругиеШтрихкодыНоменклатуры</atom:title>
+		</collection>
+		<collection href="Catalog_ОбъектыРасчетов">
+			<atom:title>Catalog_ОбъектыРасчетов</atom:title>
+		</collection>
+		<collection href="Catalog_ОбъектыРасчетов_ДополнительныеРеквизиты">
+			<atom:title>Catalog_ОбъектыРасчетов_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_ДоговорыКонтрагентовПрисоединенныеФайлы">
+			<atom:title>Catalog_ДоговорыКонтрагентовПрисоединенныеФайлы</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_ОперацииТСД">
+			<atom:title>Catalog_аллегро_ОперацииТСД</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_ОперацииТСД_ДополнительныеКолонкиДляВыводаНаТСД">
+			<atom:title>Catalog_аллегро_ОперацииТСД_ДополнительныеКолонкиДляВыводаНаТСД</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_ОперацииТСД_ДополнительныеКолонкиЖурналаДляВыводаНаТСД">
+			<atom:title>Catalog_аллегро_ОперацииТСД_ДополнительныеКолонкиЖурналаДляВыводаНаТСД</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_ОперацииТСД_ЗначенияРеквизитовДляУстановкиПриВыгрузкеСТСД">
+			<atom:title>Catalog_аллегро_ОперацииТСД_ЗначенияРеквизитовДляУстановкиПриВыгрузкеСТСД</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_ОперацииТСД_ЗначенияРеквизитовДляУстановкиПриЗагрузкеНаТСД">
+			<atom:title>Catalog_аллегро_ОперацииТСД_ЗначенияРеквизитовДляУстановкиПриЗагрузкеНаТСД</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_ОперацииТСД_ЗначенияРеквизитовТЧДляУстановкиПриВыгрузкеСТСД">
+			<atom:title>Catalog_аллегро_ОперацииТСД_ЗначенияРеквизитовТЧДляУстановкиПриВыгрузкеСТСД</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_ОперацииТСД_НастройкиОтбораСпискаДокументов">
+			<atom:title>Catalog_аллегро_ОперацииТСД_НастройкиОтбораСпискаДокументов</atom:title>
+		</collection>
+		<collection href="Catalog_Организации">
+			<atom:title>Catalog_Организации</atom:title>
+		</collection>
+		<collection href="Catalog_Организации_КонтактнаяИнформация">
+			<atom:title>Catalog_Организации_КонтактнаяИнформация</atom:title>
+		</collection>
+		<collection href="Catalog_Организации_ДополнительныеРеквизиты">
+			<atom:title>Catalog_Организации_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_Организации_ИсторияНаименований">
+			<atom:title>Catalog_Организации_ИсторияНаименований</atom:title>
+		</collection>
+		<collection href="Catalog_ОтветственныеЛицаОрганизаций">
+			<atom:title>Catalog_ОтветственныеЛицаОрганизаций</atom:title>
+		</collection>
+		<collection href="Catalog_ПапкиФайлов">
+			<atom:title>Catalog_ПапкиФайлов</atom:title>
+		</collection>
+		<collection href="Catalog_ПапкиФайлов_ДополнительныеРеквизиты">
+			<atom:title>Catalog_ПапкиФайлов_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_ПартииТМЦВЭксплуатации">
+			<atom:title>Catalog_ПартииТМЦВЭксплуатации</atom:title>
+		</collection>
+		<collection href="Catalog_Партнеры">
+			<atom:title>Catalog_Партнеры</atom:title>
+		</collection>
+		<collection href="Catalog_Партнеры_ДополнительныеРеквизиты">
+			<atom:title>Catalog_Партнеры_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_Партнеры_КонтактнаяИнформация">
+			<atom:title>Catalog_Партнеры_КонтактнаяИнформация</atom:title>
+		</collection>
+		<collection href="Catalog_ПодключаемоеОборудование">
+			<atom:title>Catalog_ПодключаемоеОборудование</atom:title>
+		</collection>
+		<collection href="Catalog_ПодключаемоеОборудование_ОграничениеДоступа">
+			<atom:title>Catalog_ПодключаемоеОборудование_ОграничениеДоступа</atom:title>
+		</collection>
+		<collection href="Catalog_ПодключаемоеОборудование_ПараметрыРегистрации">
+			<atom:title>Catalog_ПодключаемоеОборудование_ПараметрыРегистрации</atom:title>
+		</collection>
+		<collection href="Catalog_Приоритеты">
+			<atom:title>Catalog_Приоритеты</atom:title>
+		</collection>
+		<collection href="Catalog_МашиночитаемыеДоверенностиПрисоединенныеФайлы">
+			<atom:title>Catalog_МашиночитаемыеДоверенностиПрисоединенныеФайлы</atom:title>
+		</collection>
+		<collection href="Catalog_ОрганизацииПрисоединенныеФайлы">
+			<atom:title>Catalog_ОрганизацииПрисоединенныеФайлы</atom:title>
+		</collection>
+		<collection href="Document_ИнойДокументПодтвержденияНДС">
+			<atom:title>Document_ИнойДокументПодтвержденияНДС</atom:title>
+		</collection>
+		<collection href="Catalog_Производители">
+			<atom:title>Catalog_Производители</atom:title>
+		</collection>
+		<collection href="Catalog_ПроизводственныеКалендари">
+			<atom:title>Catalog_ПроизводственныеКалендари</atom:title>
+		</collection>
+		<collection href="Catalog_ПрочиеАктивыПассивы">
+			<atom:title>Catalog_ПрочиеАктивыПассивы</atom:title>
+		</collection>
+		<collection href="Catalog_ПрочиеАктивыПассивы_ДополнительныеРеквизиты">
+			<atom:title>Catalog_ПрочиеАктивыПассивы_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_ПрочиеРасходы">
+			<atom:title>Catalog_ПрочиеРасходы</atom:title>
+		</collection>
+		<collection href="Catalog_ПрочиеРасходы_ДополнительныеРеквизиты">
+			<atom:title>Catalog_ПрочиеРасходы_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_РабочиеМеста">
+			<atom:title>Catalog_РабочиеМеста</atom:title>
+		</collection>
+		<collection href="Catalog_РабочиеМеста_ИдентификаторыКлиентов">
+			<atom:title>Catalog_РабочиеМеста_ИдентификаторыКлиентов</atom:title>
+		</collection>
+		<collection href="Catalog_РабочиеМеста_MACАдреса">
+			<atom:title>Catalog_РабочиеМеста_MACАдреса</atom:title>
+		</collection>
+		<collection href="Catalog_РегистрацииВНалоговомОргане">
+			<atom:title>Catalog_РегистрацииВНалоговомОргане</atom:title>
+		</collection>
+		<collection href="Catalog_РегистрацииВНалоговомОргане_КонтактнаяИнформация">
+			<atom:title>Catalog_РегистрацииВНалоговомОргане_КонтактнаяИнформация</atom:title>
+		</collection>
+		<collection href="Catalog_РегистрацииВНалоговомОргане_Подписанты">
+			<atom:title>Catalog_РегистрацииВНалоговомОргане_Подписанты</atom:title>
+		</collection>
+		<collection href="Catalog_СегментыПартнеров">
+			<atom:title>Catalog_СегментыПартнеров</atom:title>
+		</collection>
+		<collection href="Catalog_СегментыПартнеров_ПартнерыПоСегменту">
+			<atom:title>Catalog_СегментыПартнеров_ПартнерыПоСегменту</atom:title>
+		</collection>
+		<collection href="Catalog_Склады">
+			<atom:title>Catalog_Склады</atom:title>
+		</collection>
+		<collection href="Catalog_Склады_КонтактнаяИнформация">
+			<atom:title>Catalog_Склады_КонтактнаяИнформация</atom:title>
+		</collection>
+		<collection href="Catalog_Склады_ДополнительныеРеквизиты">
+			<atom:title>Catalog_Склады_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_СоглашенияСКлиентами">
+			<atom:title>Catalog_СоглашенияСКлиентами</atom:title>
+		</collection>
+		<collection href="Catalog_СоглашенияСКлиентами_Товары">
+			<atom:title>Catalog_СоглашенияСКлиентами_Товары</atom:title>
+		</collection>
+		<collection href="Catalog_СоглашенияСКлиентами_ЦеновыеГруппы">
+			<atom:title>Catalog_СоглашенияСКлиентами_ЦеновыеГруппы</atom:title>
+		</collection>
+		<collection href="Catalog_СоглашенияСКлиентами_ДополнительныеРеквизиты">
+			<atom:title>Catalog_СоглашенияСКлиентами_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_СоглашенияСКлиентами_ЭтапыГрафикаОплаты">
+			<atom:title>Catalog_СоглашенияСКлиентами_ЭтапыГрафикаОплаты</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_СотрудникиТСД">
+			<atom:title>Catalog_аллегро_СотрудникиТСД</atom:title>
+		</collection>
+		<collection href="Catalog_аллегро_СотрудникиТСД_ОперацииСотрудника">
+			<atom:title>Catalog_аллегро_СотрудникиТСД_ОперацииСотрудника</atom:title>
+		</collection>
+		<collection href="Catalog_КлассификаторБанков">
+			<atom:title>Catalog_КлассификаторБанков</atom:title>
+		</collection>
+		<collection href="Catalog_СтавкиНДС">
+			<atom:title>Catalog_СтавкиНДС</atom:title>
+		</collection>
+		<collection href="Catalog_СтавкиНДС_ТипыНалогообложенияНДС">
+			<atom:title>Catalog_СтавкиНДС_ТипыНалогообложенияНДС</atom:title>
+		</collection>
+		<collection href="Catalog_СтатьиДвиженияДенежныхСредств">
+			<atom:title>Catalog_СтатьиДвиженияДенежныхСредств</atom:title>
+		</collection>
+		<collection href="Catalog_СтатьиДвиженияДенежныхСредств_ХозяйственныеОперации">
+			<atom:title>Catalog_СтатьиДвиженияДенежныхСредств_ХозяйственныеОперации</atom:title>
+		</collection>
+		<collection href="Catalog_СтатьиДвиженияДенежныхСредств_ДополнительныеРеквизиты">
+			<atom:title>Catalog_СтатьиДвиженияДенежныхСредств_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_СтраныМира">
+			<atom:title>Catalog_СтраныМира</atom:title>
+		</collection>
+		<collection href="Catalog_СтраныМира_ДополнительныеРеквизиты">
+			<atom:title>Catalog_СтраныМира_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_СтруктураПредприятия">
+			<atom:title>Catalog_СтруктураПредприятия</atom:title>
+		</collection>
+		<collection href="Catalog_СтруктураПредприятия_ГрафикиРаботы">
+			<atom:title>Catalog_СтруктураПредприятия_ГрафикиРаботы</atom:title>
+		</collection>
+		<collection href="Catalog_СтруктураПредприятия_ДополнительныеРеквизиты">
+			<atom:title>Catalog_СтруктураПредприятия_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМВозврат">
+			<atom:title>Document_ЧекККМВозврат</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМВозврат_Товары">
+			<atom:title>Document_ЧекККМВозврат_Товары</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМВозврат_ОплатаПлатежнымиКартами">
+			<atom:title>Document_ЧекККМВозврат_ОплатаПлатежнымиКартами</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМВозврат_Серии">
+			<atom:title>Document_ЧекККМВозврат_Серии</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМВозврат_БонусныеБаллы">
+			<atom:title>Document_ЧекККМВозврат_БонусныеБаллы</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМВозврат_АкцизныеМарки">
+			<atom:title>Document_ЧекККМВозврат_АкцизныеМарки</atom:title>
+		</collection>
+		<collection href="Catalog_СхемыОбеспечения">
+			<atom:title>Catalog_СхемыОбеспечения</atom:title>
+		</collection>
+		<collection href="Catalog_ТипоразмерыУпаковок">
+			<atom:title>Catalog_ТипоразмерыУпаковок</atom:title>
+		</collection>
+		<collection href="Catalog_ТипыТранспортныхСредств">
+			<atom:title>Catalog_ТипыТранспортныхСредств</atom:title>
+		</collection>
+		<collection href="Catalog_ТранспортныеСредства">
+			<atom:title>Catalog_ТранспортныеСредства</atom:title>
+		</collection>
+		<collection href="Catalog_УпаковкиЕдиницыИзмерения">
+			<atom:title>Catalog_УпаковкиЕдиницыИзмерения</atom:title>
+		</collection>
+		<collection href="Document_СписаниеНДСНаРасходы">
+			<atom:title>Document_СписаниеНДСНаРасходы</atom:title>
+		</collection>
+		<collection href="Document_СписаниеНДСНаРасходы_Ценности">
+			<atom:title>Document_СписаниеНДСНаРасходы_Ценности</atom:title>
+		</collection>
+		<collection href="Document_СписаниеНДСНаРасходы_АвансыПолученные">
+			<atom:title>Document_СписаниеНДСНаРасходы_АвансыПолученные</atom:title>
+		</collection>
+		<collection href="Catalog_Файлы">
+			<atom:title>Catalog_Файлы</atom:title>
+		</collection>
+		<collection href="Catalog_Файлы_ДополнительныеРеквизиты">
+			<atom:title>Catalog_Файлы_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_Файлы_УдалитьСертификатыШифрования">
+			<atom:title>Catalog_Файлы_УдалитьСертификатыШифрования</atom:title>
+		</collection>
+		<collection href="Catalog_ФизическиеЛица">
+			<atom:title>Catalog_ФизическиеЛица</atom:title>
+		</collection>
+		<collection href="Catalog_ФизическиеЛица_КонтактнаяИнформация">
+			<atom:title>Catalog_ФизическиеЛица_КонтактнаяИнформация</atom:title>
+		</collection>
+		<collection href="Catalog_ФизическиеЛица_ДополнительныеРеквизиты">
+			<atom:title>Catalog_ФизическиеЛица_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_НастройкиХозяйственныхОпераций">
+			<atom:title>Catalog_НастройкиХозяйственныхОпераций</atom:title>
+		</collection>
+		<collection href="Catalog_НастройкиХозяйственныхОпераций_ПоказателиРегистра">
+			<atom:title>Catalog_НастройкиХозяйственныхОпераций_ПоказателиРегистра</atom:title>
+		</collection>
+		<collection href="Catalog_НастройкиХозяйственныхОпераций_Документы">
+			<atom:title>Catalog_НастройкиХозяйственныхОпераций_Документы</atom:title>
+		</collection>
+		<collection href="Catalog_НастройкиХозяйственныхОпераций_ФункциональныеОпции">
+			<atom:title>Catalog_НастройкиХозяйственныхОпераций_ФункциональныеОпции</atom:title>
+		</collection>
+		<collection href="Catalog_ЦеновыеГруппы">
+			<atom:title>Catalog_ЦеновыеГруппы</atom:title>
+		</collection>
+		<collection href="Catalog_ЦеновыеГруппы_ДополнительныеРеквизиты">
+			<atom:title>Catalog_ЦеновыеГруппы_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Catalog_ШаблоныЭтикетокИЦенников">
+			<atom:title>Catalog_ШаблоныЭтикетокИЦенников</atom:title>
+		</collection>
+		<collection href="Catalog_ШтрихкодыУпаковокТоваров">
+			<atom:title>Catalog_ШтрихкодыУпаковокТоваров</atom:title>
+		</collection>
+		<collection href="Catalog_ШтрихкодыУпаковокТоваров_ВложенныеТовары">
+			<atom:title>Catalog_ШтрихкодыУпаковокТоваров_ВложенныеТовары</atom:title>
+		</collection>
+		<collection href="Catalog_ШтрихкодыУпаковокТоваров_ВложенныеШтрихкоды">
+			<atom:title>Catalog_ШтрихкодыУпаковокТоваров_ВложенныеШтрихкоды</atom:title>
+		</collection>
+		<collection href="Document_УдалитьВводОстатковПрослеживаемыхИмпортныхТоваров">
+			<atom:title>Document_УдалитьВводОстатковПрослеживаемыхИмпортныхТоваров</atom:title>
+		</collection>
+		<collection href="Document_УдалитьВводОстатковПрослеживаемыхИмпортныхТоваров_Товары">
+			<atom:title>Document_УдалитьВводОстатковПрослеживаемыхИмпортныхТоваров_Товары</atom:title>
+		</collection>
+		<collection href="Document_УдалитьВводОстатковПрослеживаемыхИмпортныхТоваров_ВидыЗапасов">
+			<atom:title>Document_УдалитьВводОстатковПрослеживаемыхИмпортныхТоваров_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_АвансовыйОтчет">
+			<atom:title>Document_АвансовыйОтчет</atom:title>
+		</collection>
+		<collection href="Document_АвансовыйОтчет_ПрочиеРасходы">
+			<atom:title>Document_АвансовыйОтчет_ПрочиеРасходы</atom:title>
+		</collection>
+		<collection href="Document_АвансовыйОтчет_ОплатаПоставщикам">
+			<atom:title>Document_АвансовыйОтчет_ОплатаПоставщикам</atom:title>
+		</collection>
+		<collection href="Document_АвансовыйОтчет_КонвертацияВалюты">
+			<atom:title>Document_АвансовыйОтчет_КонвертацияВалюты</atom:title>
+		</collection>
+		<collection href="Document_АвансовыйОтчет_ДополнительныеРеквизиты">
+			<atom:title>Document_АвансовыйОтчет_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_АктВыполненныхРабот">
+			<atom:title>Document_АктВыполненныхРабот</atom:title>
+		</collection>
+		<collection href="Document_АктВыполненныхРабот_Услуги">
+			<atom:title>Document_АктВыполненныхРабот_Услуги</atom:title>
+		</collection>
+		<collection href="Document_АктВыполненныхРабот_СкидкиНаценки">
+			<atom:title>Document_АктВыполненныхРабот_СкидкиНаценки</atom:title>
+		</collection>
+		<collection href="Document_АктВыполненныхРабот_ДополнительныеРеквизиты">
+			<atom:title>Document_АктВыполненныхРабот_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_АктВыполненныхРабот_РасшифровкаПлатежа">
+			<atom:title>Document_АктВыполненныхРабот_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_АктВыполненныхРабот_ЭтапыГрафикаОплаты">
+			<atom:title>Document_АктВыполненныхРабот_ЭтапыГрафикаОплаты</atom:title>
+		</collection>
+		<collection href="Document_АктВыполненныхРабот_НачислениеБонусныхБаллов">
+			<atom:title>Document_АктВыполненныхРабот_НачислениеБонусныхБаллов</atom:title>
+		</collection>
+		<collection href="Document_АктВыполненныхРабот_ВидыЗапасов">
+			<atom:title>Document_АктВыполненныхРабот_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеОтгрузки">
+			<atom:title>Document_АктОРасхожденияхПослеОтгрузки</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеОтгрузки_ПриемкаТоваров">
+			<atom:title>Document_АктОРасхожденияхПослеОтгрузки_ПриемкаТоваров</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеОтгрузки_Товары">
+			<atom:title>Document_АктОРасхожденияхПослеОтгрузки_Товары</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеОтгрузки_Серии">
+			<atom:title>Document_АктОРасхожденияхПослеОтгрузки_Серии</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеОтгрузки_ДополнительныеРеквизиты">
+			<atom:title>Document_АктОРасхожденияхПослеОтгрузки_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеОтгрузки_ШтрихкодыУпаковок">
+			<atom:title>Document_АктОРасхожденияхПослеОтгрузки_ШтрихкодыУпаковок</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеОтгрузки_ШтрихкодыУпаковокРасхождения">
+			<atom:title>Document_АктОРасхожденияхПослеОтгрузки_ШтрихкодыУпаковокРасхождения</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеОтгрузки_ШтрихкодыУпаковокФактЭДО">
+			<atom:title>Document_АктОРасхожденияхПослеОтгрузки_ШтрихкодыУпаковокФактЭДО</atom:title>
+		</collection>
+		<collection href="Document_ЗаказКлиента">
+			<atom:title>Document_ЗаказКлиента</atom:title>
+		</collection>
+		<collection href="Document_ЗаказКлиента_Товары">
+			<atom:title>Document_ЗаказКлиента_Товары</atom:title>
+		</collection>
+		<collection href="Document_ЗаказКлиента_ЭтапыГрафикаОплаты">
+			<atom:title>Document_ЗаказКлиента_ЭтапыГрафикаОплаты</atom:title>
+		</collection>
+		<collection href="Document_ЗаказКлиента_СкидкиНаценки">
+			<atom:title>Document_ЗаказКлиента_СкидкиНаценки</atom:title>
+		</collection>
+		<collection href="Document_ЗаказКлиента_НачислениеБонусныхБаллов">
+			<atom:title>Document_ЗаказКлиента_НачислениеБонусныхБаллов</atom:title>
+		</collection>
+		<collection href="Document_ЗаказКлиента_ДополнительныеРеквизиты">
+			<atom:title>Document_ЗаказКлиента_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеПриемки">
+			<atom:title>Document_АктОРасхожденияхПослеПриемки</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеПриемки_Товары">
+			<atom:title>Document_АктОРасхожденияхПослеПриемки_Товары</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеПриемки_Серии">
+			<atom:title>Document_АктОРасхожденияхПослеПриемки_Серии</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеПриемки_ПриемкаТоваров">
+			<atom:title>Document_АктОРасхожденияхПослеПриемки_ПриемкаТоваров</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеПриемки_ДополнительныеРеквизиты">
+			<atom:title>Document_АктОРасхожденияхПослеПриемки_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеПриемки_ШтрихкодыУпаковок">
+			<atom:title>Document_АктОРасхожденияхПослеПриемки_ШтрихкодыУпаковок</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеПриемки_ШтрихкодыУпаковокРасхождения">
+			<atom:title>Document_АктОРасхожденияхПослеПриемки_ШтрихкодыУпаковокРасхождения</atom:title>
+		</collection>
+		<collection href="Document_АктОРасхожденияхПослеПриемки_ШтрихкодыУпаковокФактЭДО">
+			<atom:title>Document_АктОРасхожденияхПослеПриемки_ШтрихкодыУпаковокФактЭДО</atom:title>
+		</collection>
+		<collection href="Document_Бронирование">
+			<atom:title>Document_Бронирование</atom:title>
+		</collection>
+		<collection href="Document_Бронирование_Операции">
+			<atom:title>Document_Бронирование_Операции</atom:title>
+		</collection>
+		<collection href="Document_Бронирование_Сборы">
+			<atom:title>Document_Бронирование_Сборы</atom:title>
+		</collection>
+		<collection href="Document_Бронирование_ДополнительныеРеквизиты">
+			<atom:title>Document_Бронирование_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков">
+			<atom:title>Document_ВводОстатков</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_Товары">
+			<atom:title>Document_ВводОстатков_Товары</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_Кассы">
+			<atom:title>Document_ВводОстатков_Кассы</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_КассыККМ">
+			<atom:title>Document_ВводОстатков_КассыККМ</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_БанковскиеСчета">
+			<atom:title>Document_ВводОстатков_БанковскиеСчета</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_РасчетыМеждуОрганизациями">
+			<atom:title>Document_ВводОстатков_РасчетыМеждуОрганизациями</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_РасчетыСПартнерами">
+			<atom:title>Document_ВводОстатков_РасчетыСПартнерами</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_РасчетыСПодотчетниками">
+			<atom:title>Document_ВводОстатков_РасчетыСПодотчетниками</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_РасчетыПоЭквайрингу">
+			<atom:title>Document_ВводОстатков_РасчетыПоЭквайрингу</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_Серии">
+			<atom:title>Document_ВводОстатков_Серии</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_ПрочиеАктивыПассивы">
+			<atom:title>Document_ВводОстатков_ПрочиеАктивыПассивы</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_ПодарочныеСертификаты">
+			<atom:title>Document_ВводОстатков_ПодарочныеСертификаты</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_РасчетыПоФинансовымИнструментам">
+			<atom:title>Document_ВводОстатков_РасчетыПоФинансовымИнструментам</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_ТМЦВЭксплуатации">
+			<atom:title>Document_ВводОстатков_ТМЦВЭксплуатации</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_ПрочиеРасходы">
+			<atom:title>Document_ВводОстатков_ПрочиеРасходы</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_ФинансовыйРезультатРасходы">
+			<atom:title>Document_ВводОстатков_ФинансовыйРезультатРасходы</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_ФинансовыйРезультатДоходы">
+			<atom:title>Document_ВводОстатков_ФинансовыйРезультатДоходы</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_ОптовыеПродажи">
+			<atom:title>Document_ВводОстатков_ОптовыеПродажи</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_РозничныеПродажи">
+			<atom:title>Document_ВводОстатков_РозничныеПродажи</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_НДСПредъявленный">
+			<atom:title>Document_ВводОстатков_НДСПредъявленный</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_РасходыПриУСН">
+			<atom:title>Document_ВводОстатков_РасходыПриУСН</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатков_ДетализацияПартий">
+			<atom:title>Document_ВводОстатков_ДетализацияПартий</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковВзаиморасчетов">
+			<atom:title>Document_ВводОстатковВзаиморасчетов</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковВзаиморасчетов_РасчетыСПартнерами">
+			<atom:title>Document_ВводОстатковВзаиморасчетов_РасчетыСПартнерами</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковДенежныхСредств">
+			<atom:title>Document_ВводОстатковДенежныхСредств</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковДенежныхСредств_Кассы">
+			<atom:title>Document_ВводОстатковДенежныхСредств_Кассы</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковДенежныхСредств_КассыККМ">
+			<atom:title>Document_ВводОстатковДенежныхСредств_КассыККМ</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковДенежныхСредств_БанковскиеСчета">
+			<atom:title>Document_ВводОстатковДенежныхСредств_БанковскиеСчета</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковОПродажахЗаПрошлыеПериоды">
+			<atom:title>Document_ВводОстатковОПродажахЗаПрошлыеПериоды</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковОПродажахЗаПрошлыеПериоды_ОптовыеПродажи">
+			<atom:title>Document_ВводОстатковОПродажахЗаПрошлыеПериоды_ОптовыеПродажи</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковОПродажахЗаПрошлыеПериоды_РозничныеПродажи">
+			<atom:title>Document_ВводОстатковОПродажахЗаПрошлыеПериоды_РозничныеПродажи</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковОПродажахЗаПрошлыеПериоды_ПодарочныеСертификаты">
+			<atom:title>Document_ВводОстатковОПродажахЗаПрошлыеПериоды_ПодарочныеСертификаты</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковОПродажахЗаПрошлыеПериоды_ФинансовыйРезультатРасходы">
+			<atom:title>Document_ВводОстатковОПродажахЗаПрошлыеПериоды_ФинансовыйРезультатРасходы</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковОПродажахЗаПрошлыеПериоды_ФинансовыйРезультатДоходы">
+			<atom:title>Document_ВводОстатковОПродажахЗаПрошлыеПериоды_ФинансовыйРезультатДоходы</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковПоФинансовымИнструментам">
+			<atom:title>Document_ВводОстатковПоФинансовымИнструментам</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковПоФинансовымИнструментам_РасчетыПоФинансовымИнструментам">
+			<atom:title>Document_ВводОстатковПоФинансовымИнструментам_РасчетыПоФинансовымИнструментам</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковПрочиеРасходы">
+			<atom:title>Document_ВводОстатковПрочиеРасходы</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковПрочиеРасходы_ПрочиеРасходы">
+			<atom:title>Document_ВводОстатковПрочиеРасходы_ПрочиеРасходы</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковРасчетовПоЭквайрингу">
+			<atom:title>Document_ВводОстатковРасчетовПоЭквайрингу</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковРасчетовПоЭквайрингу_РасчетыПоЭквайрингу">
+			<atom:title>Document_ВводОстатковРасчетовПоЭквайрингу_РасчетыПоЭквайрингу</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковСПодотчетниками">
+			<atom:title>Document_ВводОстатковСПодотчетниками</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковСПодотчетниками_РасчетыСПодотчетниками">
+			<atom:title>Document_ВводОстатковСПодотчетниками_РасчетыСПодотчетниками</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковТМЦВЭксплуатации">
+			<atom:title>Document_ВводОстатковТМЦВЭксплуатации</atom:title>
+		</collection>
+		<collection href="Document_ВводОстатковТМЦВЭксплуатации_ТМЦВЭксплуатации">
+			<atom:title>Document_ВводОстатковТМЦВЭксплуатации_ТМЦВЭксплуатации</atom:title>
+		</collection>
+		<collection href="Document_ВзаимозачетЗадолженности">
+			<atom:title>Document_ВзаимозачетЗадолженности</atom:title>
+		</collection>
+		<collection href="Document_ВзаимозачетЗадолженности_ДебиторскаяЗадолженность">
+			<atom:title>Document_ВзаимозачетЗадолженности_ДебиторскаяЗадолженность</atom:title>
+		</collection>
+		<collection href="Document_ВзаимозачетЗадолженности_КредиторскаяЗадолженность">
+			<atom:title>Document_ВзаимозачетЗадолженности_КредиторскаяЗадолженность</atom:title>
+		</collection>
+		<collection href="Document_ВзаимозачетЗадолженности_ДополнительныеРеквизиты">
+			<atom:title>Document_ВзаимозачетЗадолженности_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ВнесениеДенежныхСредствВКассуККМ">
+			<atom:title>Document_ВнесениеДенежныхСредствВКассуККМ</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровОтКлиента">
+			<atom:title>Document_ВозвратТоваровОтКлиента</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровОтКлиента_Товары">
+			<atom:title>Document_ВозвратТоваровОтКлиента_Товары</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровОтКлиента_ВидыЗапасов">
+			<atom:title>Document_ВозвратТоваровОтКлиента_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровОтКлиента_Серии">
+			<atom:title>Document_ВозвратТоваровОтКлиента_Серии</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровОтКлиента_НачислениеБонусныхБаллов">
+			<atom:title>Document_ВозвратТоваровОтКлиента_НачислениеБонусныхБаллов</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровОтКлиента_ОплатаБонуснымиБаллами">
+			<atom:title>Document_ВозвратТоваровОтКлиента_ОплатаБонуснымиБаллами</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровОтКлиента_ШтрихкодыУпаковок">
+			<atom:title>Document_ВозвратТоваровОтКлиента_ШтрихкодыУпаковок</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровОтКлиента_РасшифровкаПлатежа">
+			<atom:title>Document_ВозвратТоваровОтКлиента_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровОтКлиента_ДополнительныеРеквизиты">
+			<atom:title>Document_ВозвратТоваровОтКлиента_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровПоставщику">
+			<atom:title>Document_ВозвратТоваровПоставщику</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровПоставщику_Товары">
+			<atom:title>Document_ВозвратТоваровПоставщику_Товары</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровПоставщику_ВидыЗапасов">
+			<atom:title>Document_ВозвратТоваровПоставщику_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровПоставщику_РасшифровкаПлатежа">
+			<atom:title>Document_ВозвратТоваровПоставщику_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровПоставщику_Серии">
+			<atom:title>Document_ВозвратТоваровПоставщику_Серии</atom:title>
+		</collection>
+		<collection href="Document_ВозвратТоваровПоставщику_ШтрихкодыУпаковок">
+			<atom:title>Document_ВозвратТоваровПоставщику_ШтрихкодыУпаковок</atom:title>
+		</collection>
+		<collection href="Document_ДоверенностьВыданная">
+			<atom:title>Document_ДоверенностьВыданная</atom:title>
+		</collection>
+		<collection href="Document_ДоверенностьВыданная_Товары">
+			<atom:title>Document_ДоверенностьВыданная_Товары</atom:title>
+		</collection>
+		<collection href="Document_ДоверенностьВыданная_МатериальныеЦенности">
+			<atom:title>Document_ДоверенностьВыданная_МатериальныеЦенности</atom:title>
+		</collection>
+		<collection href="Document_ВыемкаДенежныхСредствИзКассыККМ">
+			<atom:title>Document_ВыемкаДенежныхСредствИзКассыККМ</atom:title>
+		</collection>
+		<collection href="Document_ВыкупВозвратнойТарыКлиентом">
+			<atom:title>Document_ВыкупВозвратнойТарыКлиентом</atom:title>
+		</collection>
+		<collection href="Document_ВыкупВозвратнойТарыКлиентом_Товары">
+			<atom:title>Document_ВыкупВозвратнойТарыКлиентом_Товары</atom:title>
+		</collection>
+		<collection href="Document_ВыкупВозвратнойТарыКлиентом_ВидыЗапасов">
+			<atom:title>Document_ВыкупВозвратнойТарыКлиентом_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_ВыкупВозвратнойТарыКлиентом_ДополнительныеРеквизиты">
+			<atom:title>Document_ВыкупВозвратнойТарыКлиентом_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ВыкупВозвратнойТарыКлиентом_РасшифровкаПлатежа">
+			<atom:title>Document_ВыкупВозвратнойТарыКлиентом_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_ВыкупВозвратнойТарыУПоставщика">
+			<atom:title>Document_ВыкупВозвратнойТарыУПоставщика</atom:title>
+		</collection>
+		<collection href="Document_ВыкупВозвратнойТарыУПоставщика_Товары">
+			<atom:title>Document_ВыкупВозвратнойТарыУПоставщика_Товары</atom:title>
+		</collection>
+		<collection href="Document_ВыкупВозвратнойТарыУПоставщика_ДополнительныеРеквизиты">
+			<atom:title>Document_ВыкупВозвратнойТарыУПоставщика_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ВыкупВозвратнойТарыУПоставщика_РасшифровкаПлатежа">
+			<atom:title>Document_ВыкупВозвратнойТарыУПоставщика_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураПолученныйНалоговыйАгент">
+			<atom:title>Document_СчетФактураПолученныйНалоговыйАгент</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураПолученныйНалоговыйАгент_ДокументыОснования">
+			<atom:title>Document_СчетФактураПолученныйНалоговыйАгент_ДокументыОснования</atom:title>
+		</collection>
+		<collection href="Document_ГрафикИсполненияДоговора">
+			<atom:title>Document_ГрафикИсполненияДоговора</atom:title>
+		</collection>
+		<collection href="Document_ГрафикИсполненияДоговора_ЭтапыГрафикаИсполненияДоговора">
+			<atom:title>Document_ГрафикИсполненияДоговора_ЭтапыГрафикаИсполненияДоговора</atom:title>
+		</collection>
+		<collection href="Document_ГрафикИсполненияДоговора_ЭтапыГрафикаОплаты">
+			<atom:title>Document_ГрафикИсполненияДоговора_ЭтапыГрафикаОплаты</atom:title>
+		</collection>
+		<collection href="Document_ДвижениеПрочихАктивовПассивов">
+			<atom:title>Document_ДвижениеПрочихАктивовПассивов</atom:title>
+		</collection>
+		<collection href="Document_ДвижениеПрочихАктивовПассивов_ДанныеОтражения">
+			<atom:title>Document_ДвижениеПрочихАктивовПассивов_ДанныеОтражения</atom:title>
+		</collection>
+		<collection href="Document_ДвижениеПрочихАктивовПассивов_ДополнительныеРеквизиты">
+			<atom:title>Document_ДвижениеПрочихАктивовПассивов_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ЗаданиеНаПеревозку">
+			<atom:title>Document_ЗаданиеНаПеревозку</atom:title>
+		</collection>
+		<collection href="Document_ЗаданиеНаПеревозку_Маршрут">
+			<atom:title>Document_ЗаданиеНаПеревозку_Маршрут</atom:title>
+		</collection>
+		<collection href="Document_ЗаданиеНаПеревозку_Распоряжения">
+			<atom:title>Document_ЗаданиеНаПеревозку_Распоряжения</atom:title>
+		</collection>
+		<collection href="Document_ЗаданиеНаПеревозку_ДополнительныеРеквизиты">
+			<atom:title>Document_ЗаданиеНаПеревозку_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ЗаписьКнигиПокупок">
+			<atom:title>Document_ЗаписьКнигиПокупок</atom:title>
+		</collection>
+		<collection href="Document_ЗаписьКнигиПокупок_Ценности">
+			<atom:title>Document_ЗаписьКнигиПокупок_Ценности</atom:title>
+		</collection>
+		<collection href="Document_ЗаписьКнигиПокупок_ДокументыОплаты">
+			<atom:title>Document_ЗаписьКнигиПокупок_ДокументыОплаты</atom:title>
+		</collection>
+		<collection href="Document_ЗаписьКнигиПродаж">
+			<atom:title>Document_ЗаписьКнигиПродаж</atom:title>
+		</collection>
+		<collection href="Document_ЗаписьКнигиПродаж_Ценности">
+			<atom:title>Document_ЗаписьКнигиПродаж_Ценности</atom:title>
+		</collection>
+		<collection href="Document_ЗаписьКнигиПродаж_ДокументыОплаты">
+			<atom:title>Document_ЗаписьКнигиПродаж_ДокументыОплаты</atom:title>
+		</collection>
+		<collection href="Document_ЗаписьКнигиПродаж_Расхождения">
+			<atom:title>Document_ЗаписьКнигиПродаж_Расхождения</atom:title>
+		</collection>
+		<collection href="Document_ПодтверждениеЗачисленияЗарплаты">
+			<atom:title>Document_ПодтверждениеЗачисленияЗарплаты</atom:title>
+		</collection>
+		<collection href="Document_ПодтверждениеЗачисленияЗарплаты_Сотрудники">
+			<atom:title>Document_ПодтверждениеЗачисленияЗарплаты_Сотрудники</atom:title>
+		</collection>
+		<collection href="Document_ПодтверждениеЗачисленияЗарплаты_ДополнительныеРеквизиты">
+			<atom:title>Document_ПодтверждениеЗачисленияЗарплаты_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ИнвентаризацияНаличныхДенежныхСредств">
+			<atom:title>Document_ИнвентаризацияНаличныхДенежныхСредств</atom:title>
+		</collection>
+		<collection href="Document_ИнвентаризацияНаличныхДенежныхСредств_Кассы">
+			<atom:title>Document_ИнвентаризацияНаличныхДенежныхСредств_Кассы</atom:title>
+		</collection>
+		<collection href="Document_ИнвентаризацияНаличныхДенежныхСредств_ДополнительныеРеквизиты">
+			<atom:title>Document_ИнвентаризацияНаличныхДенежныхСредств_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ИсправлениеРазвернутогоСальдоТоваровОрганизаций">
+			<atom:title>Document_ИсправлениеРазвернутогоСальдоТоваровОрганизаций</atom:title>
+		</collection>
+		<collection href="Document_ИсправлениеРазвернутогоСальдоТоваровОрганизаций_Исправления">
+			<atom:title>Document_ИсправлениеРазвернутогоСальдоТоваровОрганизаций_Исправления</atom:title>
+		</collection>
+		<collection href="Document_КассоваяСмена">
+			<atom:title>Document_КассоваяСмена</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаВидаДеятельностиНДС">
+			<atom:title>Document_КорректировкаВидаДеятельностиНДС</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаВидаДеятельностиНДС_Товары">
+			<atom:title>Document_КорректировкаВидаДеятельностиНДС_Товары</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаВидаДеятельностиНДС_ВидыЗапасов">
+			<atom:title>Document_КорректировкаВидаДеятельностиНДС_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаЗадолженности">
+			<atom:title>Document_КорректировкаЗадолженности</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаЗадолженности_Задолженность">
+			<atom:title>Document_КорректировкаЗадолженности_Задолженность</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаЗадолженности_ДоходыРасходыАктивыПассивы">
+			<atom:title>Document_КорректировкаЗадолженности_ДоходыРасходыАктивыПассивы</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаПриобретения">
+			<atom:title>Document_КорректировкаПриобретения</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаПриобретения_Товары">
+			<atom:title>Document_КорректировкаПриобретения_Товары</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаПриобретения_Расхождения">
+			<atom:title>Document_КорректировкаПриобретения_Расхождения</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаПриобретения_ДополнительныеРеквизиты">
+			<atom:title>Document_КорректировкаПриобретения_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаПриобретения_ВидыЗапасов">
+			<atom:title>Document_КорректировкаПриобретения_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаПриобретения_ШтрихкодыУпаковок">
+			<atom:title>Document_КорректировкаПриобретения_ШтрихкодыУпаковок</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаПриобретения_КорректировкаЗадолженности">
+			<atom:title>Document_КорректировкаПриобретения_КорректировкаЗадолженности</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРеализации">
+			<atom:title>Document_КорректировкаРеализации</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРеализации_Товары">
+			<atom:title>Document_КорректировкаРеализации_Товары</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРеализации_Расхождения">
+			<atom:title>Document_КорректировкаРеализации_Расхождения</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРеализации_ВидыЗапасовКорректировкаВыручки">
+			<atom:title>Document_КорректировкаРеализации_ВидыЗапасовКорректировкаВыручки</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРеализации_ВидыЗапасовОприходование">
+			<atom:title>Document_КорректировкаРеализации_ВидыЗапасовОприходование</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРеализации_ВидыЗапасовСписание">
+			<atom:title>Document_КорректировкаРеализации_ВидыЗапасовСписание</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРеализации_ДополнительныеРеквизиты">
+			<atom:title>Document_КорректировкаРеализации_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРеализации_ШтрихкодыУпаковок">
+			<atom:title>Document_КорректировкаРеализации_ШтрихкодыУпаковок</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРеализации_КорректировкаЗадолженности">
+			<atom:title>Document_КорректировкаРеализации_КорректировкаЗадолженности</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРеализации_НачислениеБонусныхБаллов">
+			<atom:title>Document_КорректировкаРеализации_НачислениеБонусныхБаллов</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРеализации_ОплатаБонуснымиБаллами">
+			<atom:title>Document_КорректировкаРеализации_ОплатаБонуснымиБаллами</atom:title>
+		</collection>
+		<collection href="Document_УстановкаЦенНоменклатуры">
+			<atom:title>Document_УстановкаЦенНоменклатуры</atom:title>
+		</collection>
+		<collection href="Document_УстановкаЦенНоменклатуры_Товары">
+			<atom:title>Document_УстановкаЦенНоменклатуры_Товары</atom:title>
+		</collection>
+		<collection href="Document_УстановкаЦенНоменклатуры_Товары2_5">
+			<atom:title>Document_УстановкаЦенНоменклатуры_Товары2_5</atom:title>
+		</collection>
+		<collection href="Document_УстановкаЦенНоменклатуры_ВидыЦен">
+			<atom:title>Document_УстановкаЦенНоменклатуры_ВидыЦен</atom:title>
+		</collection>
+		<collection href="Document_УстановкаЦенНоменклатуры_НаборыЗначенийДоступа">
+			<atom:title>Document_УстановкаЦенНоменклатуры_НаборыЗначенийДоступа</atom:title>
+		</collection>
+		<collection href="Document_УстановкаЦенНоменклатуры_ДополнительныеРеквизиты">
+			<atom:title>Document_УстановкаЦенНоменклатуры_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРегистров">
+			<atom:title>Document_КорректировкаРегистров</atom:title>
+		</collection>
+		<collection href="Document_КорректировкаРегистров_ТаблицаРегистров">
+			<atom:title>Document_КорректировкаРегистров_ТаблицаРегистров</atom:title>
+		</collection>
+		<collection href="Document_ОперацияПоЯндексКассе">
+			<atom:title>Document_ОперацияПоЯндексКассе</atom:title>
+		</collection>
+		<collection href="Document_ОприходованиеИзлишковТоваров">
+			<atom:title>Document_ОприходованиеИзлишковТоваров</atom:title>
+		</collection>
+		<collection href="Document_ОприходованиеИзлишковТоваров_Товары">
+			<atom:title>Document_ОприходованиеИзлишковТоваров_Товары</atom:title>
+		</collection>
+		<collection href="Document_ОприходованиеИзлишковТоваров_ДополнительныеРеквизиты">
+			<atom:title>Document_ОприходованиеИзлишковТоваров_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ОрдерНаОтражениеПересортицыТоваров">
+			<atom:title>Document_ОрдерНаОтражениеПересортицыТоваров</atom:title>
+		</collection>
+		<collection href="Document_ОрдерНаОтражениеПересортицыТоваров_Товары">
+			<atom:title>Document_ОрдерНаОтражениеПересортицыТоваров_Товары</atom:title>
+		</collection>
+		<collection href="Document_ПрочиеДоходыРасходы">
+			<atom:title>Document_ПрочиеДоходыРасходы</atom:title>
+		</collection>
+		<collection href="Document_ПрочиеДоходыРасходы_ПрочиеРасходы">
+			<atom:title>Document_ПрочиеДоходыРасходы_ПрочиеРасходы</atom:title>
+		</collection>
+		<collection href="Document_ПрочиеДоходыРасходы_ПрочиеДоходы">
+			<atom:title>Document_ПрочиеДоходыРасходы_ПрочиеДоходы</atom:title>
+		</collection>
+		<collection href="Document_ПрочиеДоходыРасходы_ДополнительныеРеквизиты">
+			<atom:title>Document_ПрочиеДоходыРасходы_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ОтражениеРасхожденийПриИнкассацииДенежныхСредств">
+			<atom:title>Document_ОтражениеРасхожденийПриИнкассацииДенежныхСредств</atom:title>
+		</collection>
+		<collection href="Document_ОтражениеРасхожденийПриИнкассацииДенежныхСредств_ДополнительныеРеквизиты">
+			<atom:title>Document_ОтражениеРасхожденийПриИнкассацииДенежныхСредств_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхВозвратах">
+			<atom:title>Document_ОтчетОРозничныхВозвратах</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхВозвратах_Товары">
+			<atom:title>Document_ОтчетОРозничныхВозвратах_Товары</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхВозвратах_ВидыЗапасов">
+			<atom:title>Document_ОтчетОРозничныхВозвратах_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхВозвратах_Серии">
+			<atom:title>Document_ОтчетОРозничныхВозвратах_Серии</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхВозвратах_АкцизныеМарки">
+			<atom:title>Document_ОтчетОРозничныхВозвратах_АкцизныеМарки</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхВозвратах_ОплатаПлатежнымиКартами">
+			<atom:title>Document_ОтчетОРозничныхВозвратах_ОплатаПлатежнымиКартами</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхВозвратах_НачислениеБонусныхБаллов">
+			<atom:title>Document_ОтчетОРозничныхВозвратах_НачислениеБонусныхБаллов</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхВозвратах_ОплатаБонуснымиБаллами">
+			<atom:title>Document_ОтчетОРозничныхВозвратах_ОплатаБонуснымиБаллами</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхПродажах">
+			<atom:title>Document_ОтчетОРозничныхПродажах</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхПродажах_Товары">
+			<atom:title>Document_ОтчетОРозничныхПродажах_Товары</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхПродажах_ВидыЗапасов">
+			<atom:title>Document_ОтчетОРозничныхПродажах_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхПродажах_Серии">
+			<atom:title>Document_ОтчетОРозничныхПродажах_Серии</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхПродажах_АкцизныеМарки">
+			<atom:title>Document_ОтчетОРозничныхПродажах_АкцизныеМарки</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхПродажах_ОплатаПлатежнымиКартами">
+			<atom:title>Document_ОтчетОРозничныхПродажах_ОплатаПлатежнымиКартами</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхПродажах_ПодарочныеСертификаты">
+			<atom:title>Document_ОтчетОРозничныхПродажах_ПодарочныеСертификаты</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхПродажах_НачислениеБонусныхБаллов">
+			<atom:title>Document_ОтчетОРозничныхПродажах_НачислениеБонусныхБаллов</atom:title>
+		</collection>
+		<collection href="Document_ОтчетОРозничныхПродажах_ОплатаБонуснымиБаллами">
+			<atom:title>Document_ОтчетОРозничныхПродажах_ОплатаБонуснымиБаллами</atom:title>
+		</collection>
+		<collection href="Document_ПервичныйДокумент">
+			<atom:title>Document_ПервичныйДокумент</atom:title>
+		</collection>
+		<collection href="Document_ПеремещениеТоваров">
+			<atom:title>Document_ПеремещениеТоваров</atom:title>
+		</collection>
+		<collection href="Document_ПеремещениеТоваров_Товары">
+			<atom:title>Document_ПеремещениеТоваров_Товары</atom:title>
+		</collection>
+		<collection href="Document_ПеремещениеТоваров_ВидыЗапасов">
+			<atom:title>Document_ПеремещениеТоваров_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_ПеремещениеТоваров_Серии">
+			<atom:title>Document_ПеремещениеТоваров_Серии</atom:title>
+		</collection>
+		<collection href="Document_ПеремещениеТоваров_ДополнительныеРеквизиты">
+			<atom:title>Document_ПеремещениеТоваров_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ПеремещениеТоваров_ШтрихкодыУпаковок">
+			<atom:title>Document_ПеремещениеТоваров_ШтрихкодыУпаковок</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМКоррекции">
+			<atom:title>Document_ЧекККМКоррекции</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМКоррекции_Товары">
+			<atom:title>Document_ЧекККМКоррекции_Товары</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМКоррекции_ОплатаПлатежнымиКартами">
+			<atom:title>Document_ЧекККМКоррекции_ОплатаПлатежнымиКартами</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМКоррекции_Серии">
+			<atom:title>Document_ЧекККМКоррекции_Серии</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМКоррекции_ПодарочныеСертификаты">
+			<atom:title>Document_ЧекККМКоррекции_ПодарочныеСертификаты</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМКоррекции_АкцизныеМарки">
+			<atom:title>Document_ЧекККМКоррекции_АкцизныеМарки</atom:title>
+		</collection>
+		<collection href="Document_ПересортицаТоваров">
+			<atom:title>Document_ПересортицаТоваров</atom:title>
+		</collection>
+		<collection href="Document_ПересортицаТоваров_Товары">
+			<atom:title>Document_ПересортицаТоваров_Товары</atom:title>
+		</collection>
+		<collection href="Document_ПересортицаТоваров_ВидыЗапасов">
+			<atom:title>Document_ПересортицаТоваров_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_ПересортицаТоваров_ДополнительныеРеквизиты">
+			<atom:title>Document_ПересортицаТоваров_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураВыданныйАванс">
+			<atom:title>Document_СчетФактураВыданныйАванс</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураВыданныйАванс_Авансы">
+			<atom:title>Document_СчетФактураВыданныйАванс_Авансы</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураВыданныйАванс_ДокументыАвансовКомитента">
+			<atom:title>Document_СчетФактураВыданныйАванс_ДокументыАвансовКомитента</atom:title>
+		</collection>
+		<collection href="Document_ПересчетТоваров">
+			<atom:title>Document_ПересчетТоваров</atom:title>
+		</collection>
+		<collection href="Document_ПересчетТоваров_Товары">
+			<atom:title>Document_ПересчетТоваров_Товары</atom:title>
+		</collection>
+		<collection href="Document_ПересчетТоваров_ДополнительныеРеквизиты">
+			<atom:title>Document_ПересчетТоваров_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ПоручениеЭкспедитору">
+			<atom:title>Document_ПоручениеЭкспедитору</atom:title>
+		</collection>
+		<collection href="Document_ПоручениеЭкспедитору_Основания">
+			<atom:title>Document_ПоручениеЭкспедитору_Основания</atom:title>
+		</collection>
+		<collection href="Document_ПоручениеЭкспедитору_ДополнительныеРеквизиты">
+			<atom:title>Document_ПоручениеЭкспедитору_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ПоступлениеБезналичныхДенежныхСредств">
+			<atom:title>Document_ПоступлениеБезналичныхДенежныхСредств</atom:title>
+		</collection>
+		<collection href="Document_ПоступлениеБезналичныхДенежныхСредств_РасшифровкаПлатежа">
+			<atom:title>Document_ПоступлениеБезналичныхДенежныхСредств_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_ПоступлениеБезналичныхДенежныхСредств_ИнструкцииБанку">
+			<atom:title>Document_ПоступлениеБезналичныхДенежныхСредств_ИнструкцииБанку</atom:title>
+		</collection>
+		<collection href="Document_ПоступлениеБезналичныхДенежныхСредств_ДополнительныеРеквизиты">
+			<atom:title>Document_ПоступлениеБезналичныхДенежныхСредств_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеТоваровУслуг">
+			<atom:title>Document_ПриобретениеТоваровУслуг</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеТоваровУслуг_Товары">
+			<atom:title>Document_ПриобретениеТоваровУслуг_Товары</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеТоваровУслуг_ДополнительныеРеквизиты">
+			<atom:title>Document_ПриобретениеТоваровУслуг_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеТоваровУслуг_РасшифровкаПлатежа">
+			<atom:title>Document_ПриобретениеТоваровУслуг_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеТоваровУслуг_Серии">
+			<atom:title>Document_ПриобретениеТоваровУслуг_Серии</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеТоваровУслуг_ВидыЗапасов">
+			<atom:title>Document_ПриобретениеТоваровУслуг_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеТоваровУслуг_ЭтапыГрафикаОплаты">
+			<atom:title>Document_ПриобретениеТоваровУслуг_ЭтапыГрафикаОплаты</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеТоваровУслуг_ШтрихкодыУпаковок">
+			<atom:title>Document_ПриобретениеТоваровУслуг_ШтрихкодыУпаковок</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеУслугПрочихАктивов">
+			<atom:title>Document_ПриобретениеУслугПрочихАктивов</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеУслугПрочихАктивов_Расходы">
+			<atom:title>Document_ПриобретениеУслугПрочихАктивов_Расходы</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеУслугПрочихАктивов_ДополнительныеРеквизиты">
+			<atom:title>Document_ПриобретениеУслугПрочихАктивов_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_ПриобретениеУслугПрочихАктивов_РасшифровкаПлатежа">
+			<atom:title>Document_ПриобретениеУслугПрочихАктивов_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_ПриходныйКассовыйОрдер">
+			<atom:title>Document_ПриходныйКассовыйОрдер</atom:title>
+		</collection>
+		<collection href="Document_ПриходныйКассовыйОрдер_РасшифровкаПлатежа">
+			<atom:title>Document_ПриходныйКассовыйОрдер_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_ПриходныйКассовыйОрдер_ДополнительныеРеквизиты">
+			<atom:title>Document_ПриходныйКассовыйОрдер_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_РаспределениеДоходовПоНаправлениямДеятельности">
+			<atom:title>Document_РаспределениеДоходовПоНаправлениямДеятельности</atom:title>
+		</collection>
+		<collection href="Document_РаспределениеДоходовПоНаправлениямДеятельности_Доходы">
+			<atom:title>Document_РаспределениеДоходовПоНаправлениямДеятельности_Доходы</atom:title>
+		</collection>
+		<collection href="Document_РаспределениеДоходовПоНаправлениямДеятельности_Расходы">
+			<atom:title>Document_РаспределениеДоходовПоНаправлениямДеятельности_Расходы</atom:title>
+		</collection>
+		<collection href="Document_РаспределениеПрочихЗатрат">
+			<atom:title>Document_РаспределениеПрочихЗатрат</atom:title>
+		</collection>
+		<collection href="Document_РаспределениеПрочихЗатрат_ДополнительныеРеквизиты">
+			<atom:title>Document_РаспределениеПрочихЗатрат_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_РаспределениеПрочихЗатрат_НаправленияДеятельности">
+			<atom:title>Document_РаспределениеПрочихЗатрат_НаправленияДеятельности</atom:title>
+		</collection>
+		<collection href="Document_РаспределениеПрочихЗатрат_ОтборПоНаправлениямДеятельности">
+			<atom:title>Document_РаспределениеПрочихЗатрат_ОтборПоНаправлениямДеятельности</atom:title>
+		</collection>
+		<collection href="Document_РаспределениеРасходовБудущихПериодов">
+			<atom:title>Document_РаспределениеРасходовБудущихПериодов</atom:title>
+		</collection>
+		<collection href="Document_РаспределениеРасходовБудущихПериодов_РаспределениеРасходов">
+			<atom:title>Document_РаспределениеРасходовБудущихПериодов_РаспределениеРасходов</atom:title>
+		</collection>
+		<collection href="Document_РасходныйКассовыйОрдер">
+			<atom:title>Document_РасходныйКассовыйОрдер</atom:title>
+		</collection>
+		<collection href="Document_РасходныйКассовыйОрдер_РасшифровкаПлатежа">
+			<atom:title>Document_РасходныйКассовыйОрдер_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_РасходныйКассовыйОрдер_ВыплатаЗаработнойПлаты">
+			<atom:title>Document_РасходныйКассовыйОрдер_ВыплатаЗаработнойПлаты</atom:title>
+		</collection>
+		<collection href="Document_РасходныйКассовыйОрдер_ДополнительныеРеквизиты">
+			<atom:title>Document_РасходныйКассовыйОрдер_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_РасчетСебестоимостиТоваров">
+			<atom:title>Document_РасчетСебестоимостиТоваров</atom:title>
+		</collection>
+		<collection href="Document_РасчетСебестоимостиТоваров_Организации">
+			<atom:title>Document_РасчетСебестоимостиТоваров_Организации</atom:title>
+		</collection>
+		<collection href="Document_РеализацияТоваровУслуг">
+			<atom:title>Document_РеализацияТоваровУслуг</atom:title>
+		</collection>
+		<collection href="Document_РеализацияТоваровУслуг_Товары">
+			<atom:title>Document_РеализацияТоваровУслуг_Товары</atom:title>
+		</collection>
+		<collection href="Document_РеализацияТоваровУслуг_СкидкиНаценки">
+			<atom:title>Document_РеализацияТоваровУслуг_СкидкиНаценки</atom:title>
+		</collection>
+		<collection href="Document_РеализацияТоваровУслуг_ВидыЗапасов">
+			<atom:title>Document_РеализацияТоваровУслуг_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_РеализацияТоваровУслуг_ДополнительныеРеквизиты">
+			<atom:title>Document_РеализацияТоваровУслуг_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_РеализацияТоваровУслуг_РасшифровкаПлатежа">
+			<atom:title>Document_РеализацияТоваровУслуг_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_РеализацияТоваровУслуг_Серии">
+			<atom:title>Document_РеализацияТоваровУслуг_Серии</atom:title>
+		</collection>
+		<collection href="Document_РеализацияТоваровУслуг_ЭтапыГрафикаОплаты">
+			<atom:title>Document_РеализацияТоваровУслуг_ЭтапыГрафикаОплаты</atom:title>
+		</collection>
+		<collection href="Document_РеализацияТоваровУслуг_ШтрихкодыУпаковок">
+			<atom:title>Document_РеализацияТоваровУслуг_ШтрихкодыУпаковок</atom:title>
+		</collection>
+		<collection href="Document_РеализацияТоваровУслуг_НачислениеБонусныхБаллов">
+			<atom:title>Document_РеализацияТоваровУслуг_НачислениеБонусныхБаллов</atom:title>
+		</collection>
+		<collection href="Document_РеализацияУслугПрочихАктивов">
+			<atom:title>Document_РеализацияУслугПрочихАктивов</atom:title>
+		</collection>
+		<collection href="Document_РеализацияУслугПрочихАктивов_Доходы">
+			<atom:title>Document_РеализацияУслугПрочихАктивов_Доходы</atom:title>
+		</collection>
+		<collection href="Document_РеализацияУслугПрочихАктивов_ДополнительныеРеквизиты">
+			<atom:title>Document_РеализацияУслугПрочихАктивов_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_РеализацияУслугПрочихАктивов_Расходы">
+			<atom:title>Document_РеализацияУслугПрочихАктивов_Расходы</atom:title>
+		</collection>
+		<collection href="Document_РеализацияУслугПрочихАктивов_РасшифровкаПлатежа">
+			<atom:title>Document_РеализацияУслугПрочихАктивов_РасшифровкаПлатежа</atom:title>
+		</collection>
+		<collection href="Document_РеализацияУслугПрочихАктивов_ПрослеживаемыеТовары">
+			<atom:title>Document_РеализацияУслугПрочихАктивов_ПрослеживаемыеТовары</atom:title>
+		</collection>
+		<collection href="Document_РегистраторРасчетаСебестоимости">
+			<atom:title>Document_РегистраторРасчетаСебестоимости</atom:title>
+		</collection>
+		<collection href="Document_РегистраторРасчетов">
+			<atom:title>Document_РегистраторРасчетов</atom:title>
+		</collection>
+		<collection href="Document_РегистрацияЦенНоменклатурыПоставщика">
+			<atom:title>Document_РегистрацияЦенНоменклатурыПоставщика</atom:title>
+		</collection>
+		<collection href="Document_РегистрацияЦенНоменклатурыПоставщика_Товары">
+			<atom:title>Document_РегистрацияЦенНоменклатурыПоставщика_Товары</atom:title>
+		</collection>
+		<collection href="Document_РегистрацияЦенНоменклатурыПоставщика_ДополнительныеРеквизиты">
+			<atom:title>Document_РегистрацияЦенНоменклатурыПоставщика_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_СверкаНачальныхОстатковПоСкладу">
+			<atom:title>Document_СверкаНачальныхОстатковПоСкладу</atom:title>
+		</collection>
+		<collection href="Document_СверкаНачальныхОстатковПоСкладу_ДанныеВнешнейСистемы">
+			<atom:title>Document_СверкаНачальныхОстатковПоСкладу_ДанныеВнешнейСистемы</atom:title>
+		</collection>
+		<collection href="Document_СверкаНачальныхОстатковПоСкладу_РезультатыСверки">
+			<atom:title>Document_СверкаНачальныхОстатковПоСкладу_РезультатыСверки</atom:title>
+		</collection>
+		<collection href="Document_СверкаНачальныхОстатковПоСкладу_ДополнительныеРеквизиты">
+			<atom:title>Document_СверкаНачальныхОстатковПоСкладу_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_СводнаяСправкаНДС">
+			<atom:title>Document_СводнаяСправкаНДС</atom:title>
+		</collection>
+		<collection href="Document_СводнаяСправкаНДС_Продажи">
+			<atom:title>Document_СводнаяСправкаНДС_Продажи</atom:title>
+		</collection>
+		<collection href="Document_СписаниеНедостачТоваров">
+			<atom:title>Document_СписаниеНедостачТоваров</atom:title>
+		</collection>
+		<collection href="Document_СписаниеНедостачТоваров_Товары">
+			<atom:title>Document_СписаниеНедостачТоваров_Товары</atom:title>
+		</collection>
+		<collection href="Document_СписаниеНедостачТоваров_ВидыЗапасов">
+			<atom:title>Document_СписаниеНедостачТоваров_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_СписаниеНедостачТоваров_ДополнительныеРеквизиты">
+			<atom:title>Document_СписаниеНедостачТоваров_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураВыданный">
+			<atom:title>Document_СчетФактураВыданный</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураВыданный_ДокументыОснования">
+			<atom:title>Document_СчетФактураВыданный_ДокументыОснования</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураВыданный_ПлатежноРасчетныеДокументы">
+			<atom:title>Document_СчетФактураВыданный_ПлатежноРасчетныеДокументы</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураВыданный_Товары">
+			<atom:title>Document_СчетФактураВыданный_Товары</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураВыданный_Покупатели">
+			<atom:title>Document_СчетФактураВыданный_Покупатели</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураНалоговыйАгент">
+			<atom:title>Document_СчетФактураНалоговыйАгент</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураНалоговыйАгент_РасшифровкаСуммы">
+			<atom:title>Document_СчетФактураНалоговыйАгент_РасшифровкаСуммы</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураПолученный">
+			<atom:title>Document_СчетФактураПолученный</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураПолученный_ДокументыОснования">
+			<atom:title>Document_СчетФактураПолученный_ДокументыОснования</atom:title>
+		</collection>
+		<collection href="Document_СчетФактураПолученный_Продавцы">
+			<atom:title>Document_СчетФактураПолученный_Продавцы</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОВвозеПрослеживаемыхТоваров">
+			<atom:title>Document_УведомлениеОВвозеПрослеживаемыхТоваров</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОВвозеПрослеживаемыхТоваров_Товары">
+			<atom:title>Document_УведомлениеОВвозеПрослеживаемыхТоваров_Товары</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОВвозеПрослеживаемыхТоваров_ВидыЗапасов">
+			<atom:title>Document_УведомлениеОВвозеПрослеживаемыхТоваров_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОПеремещенииПрослеживаемыхТоваров">
+			<atom:title>Document_УведомлениеОПеремещенииПрослеживаемыхТоваров</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОПеремещенииПрослеживаемыхТоваров_Контрагенты">
+			<atom:title>Document_УведомлениеОПеремещенииПрослеживаемыхТоваров_Контрагенты</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОПеремещенииПрослеживаемыхТоваров_Товары">
+			<atom:title>Document_УведомлениеОПеремещенииПрослеживаемыхТоваров_Товары</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОПеремещенииПрослеживаемыхТоваров_ТранзитныеСтраныЕАЭС">
+			<atom:title>Document_УведомлениеОПеремещенииПрослеживаемыхТоваров_ТранзитныеСтраныЕАЭС</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОбОстаткахПрослеживаемыхТоваров">
+			<atom:title>Document_УведомлениеОбОстаткахПрослеживаемыхТоваров</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОбОстаткахПрослеживаемыхТоваров_УдалитьТовары">
+			<atom:title>Document_УведомлениеОбОстаткахПрослеживаемыхТоваров_УдалитьТовары</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОбОстаткахПрослеживаемыхТоваров_ВидыЗапасов">
+			<atom:title>Document_УведомлениеОбОстаткахПрослеживаемыхТоваров_ВидыЗапасов</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОбОстаткахПрослеживаемыхТоваров_Продавцы">
+			<atom:title>Document_УведомлениеОбОстаткахПрослеживаемыхТоваров_Продавцы</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОбОстаткахПрослеживаемыхТоваров_ОсновныеСредства">
+			<atom:title>Document_УведомлениеОбОстаткахПрослеживаемыхТоваров_ОсновныеСредства</atom:title>
+		</collection>
+		<collection href="Document_УведомлениеОбОстаткахПрослеживаемыхТоваров_ТМЦВЭксплуатации">
+			<atom:title>Document_УведомлениеОбОстаткахПрослеживаемыхТоваров_ТМЦВЭксплуатации</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМ">
+			<atom:title>Document_ЧекККМ</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМ_Товары">
+			<atom:title>Document_ЧекККМ_Товары</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМ_ОплатаПлатежнымиКартами">
+			<atom:title>Document_ЧекККМ_ОплатаПлатежнымиКартами</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМ_СкидкиНаценки">
+			<atom:title>Document_ЧекККМ_СкидкиНаценки</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМ_Серии">
+			<atom:title>Document_ЧекККМ_Серии</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМ_ПодарочныеСертификаты">
+			<atom:title>Document_ЧекККМ_ПодарочныеСертификаты</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМ_БонусныеБаллы">
+			<atom:title>Document_ЧекККМ_БонусныеБаллы</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМ_АкцизныеМарки">
+			<atom:title>Document_ЧекККМ_АкцизныеМарки</atom:title>
+		</collection>
+		<collection href="Document_ЧекККМ_РазрешенияНаПродажу">
+			<atom:title>Document_ЧекККМ_РазрешенияНаПродажу</atom:title>
+		</collection>
+		<collection href="ChartOfCharacteristicTypes_СтатьиРасходов">
+			<atom:title>ChartOfCharacteristicTypes_СтатьиРасходов</atom:title>
+		</collection>
+		<collection href="ChartOfCharacteristicTypes_СтатьиРасходов_ДополнительныеРеквизиты">
+			<atom:title>ChartOfCharacteristicTypes_СтатьиРасходов_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="ChartOfCharacteristicTypes_СтатьиРасходов_ДоступныеХозяйственныеОперации">
+			<atom:title>ChartOfCharacteristicTypes_СтатьиРасходов_ДоступныеХозяйственныеОперации</atom:title>
+		</collection>
+		<collection href="ChartOfCharacteristicTypes_ДополнительныеРеквизитыИСведения">
+			<atom:title>ChartOfCharacteristicTypes_ДополнительныеРеквизитыИСведения</atom:title>
+		</collection>
+		<collection href="ChartOfCharacteristicTypes_ДополнительныеРеквизитыИСведения_ЗависимостиДополнительныхРеквизитов">
+			<atom:title>ChartOfCharacteristicTypes_ДополнительныеРеквизитыИСведения_ЗависимостиДополнительныхРеквизитов</atom:title>
+		</collection>
+		<collection href="ChartOfCharacteristicTypes_ДополнительныеРеквизитыИСведения_Представления">
+			<atom:title>ChartOfCharacteristicTypes_ДополнительныеРеквизитыИСведения_Представления</atom:title>
+		</collection>
+		<collection href="ChartOfCharacteristicTypes_СтатьиДоходов">
+			<atom:title>ChartOfCharacteristicTypes_СтатьиДоходов</atom:title>
+		</collection>
+		<collection href="ChartOfCharacteristicTypes_СтатьиДоходов_ДополнительныеРеквизиты">
+			<atom:title>ChartOfCharacteristicTypes_СтатьиДоходов_ДополнительныеРеквизиты</atom:title>
+		</collection>
+		<collection href="ExchangePlan_ОбменСПодключаемымОборудованиемOffline">
+			<atom:title>ExchangePlan_ОбменСПодключаемымОборудованиемOffline</atom:title>
+		</collection>
+	</workspace>
+</service>

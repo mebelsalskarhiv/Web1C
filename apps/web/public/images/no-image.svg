@@ -1,0 +1,5 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f0f2f5"/>
+  <text x="50%" y="50%" font-family="Arial" font-size="16" fill="#adb5bd" text-anchor="middle" dy=".3em">Нет изображения</text>
+  <rect x="10" y="10" width="280" height="180" fill="none" stroke="#dee2e6" stroke-width="2" stroke-dasharray="5,5"/>
+</svg>

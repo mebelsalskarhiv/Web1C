@@ -1,0 +1,620 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ===========================================
+// Enums
+// ===========================================
+
+enum UserRole {
+  admin
+  partner
+  customer
+
+  @@map("user_role")
+}
+
+enum OrderStatus {
+  new
+  confirmed
+  processing
+  shipped
+  completed
+  cancelled
+  reserved
+
+  @@map("order_status")
+}
+
+enum SyncStatus {
+  pending
+  in_progress
+  completed
+  failed
+  partial
+
+  @@map("sync_status")
+}
+
+enum SyncOperation {
+  create
+  update
+  delete
+  full_sync
+
+  @@map("sync_operation")
+}
+
+// ===========================================
+// Settings - 1C Connection Settings
+// ===========================================
+
+model Setting {
+  id          Int      @id @default(autoincrement())
+  key         String   @unique @db.VarChar(100)
+  value       String?  @db.Text
+  description String?  @db.Text
+  isEncrypted Boolean  @default(false) @map("is_encrypted")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@map("settings")
+}
+
+// ===========================================
+// Users - Application Users
+// ===========================================
+
+model User {
+  id            Int       @id @default(autoincrement())
+  email         String    @unique @db.VarChar(255)
+  inn           String?   @unique @db.VarChar(20) // Login for partners
+  passwordHash  String    @map("password_hash") @db.VarChar(255)
+  role          UserRole  @default(customer)
+  
+  // For partners: one user can manage multiple 1C partners (points of sale)
+  managedPartners UserManagedPartner[]
+  
+  // Legacy single partner link (keeping for compatibility if needed, or we can migrate)
+  partnerId     Int?      @map("partner_id")
+  partner       Partner?  @relation(fields: [partnerId], references: [id])
+  firstName     String?   @map("first_name") @db.VarChar(100)
+  lastName      String?   @map("last_name") @db.VarChar(100)
+  phone         String?   @db.VarChar(50)
+  isActive      Boolean   @default(true) @map("is_active")
+  emailVerified Boolean   @default(false) @map("email_verified")
+  lastLoginAt   DateTime? @map("last_login_at") @db.Timestamptz
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt     DateTime  @updatedAt @map("updated_at") @db.Timestamptz
+
+  orders        Order[]
+  orderHistory  OrderHistory[]
+  apiKeys       ApiKey[]
+  syncSessions  SyncSession[]
+  mergeHistory  PartnerMergeHistory[] @relation("MergeHistoryUser")
+  cartItems     CartItem[]
+
+  @@map("users")
+  @@index([email])
+  @@index([role])
+  @@index([partnerId])
+}
+
+// ===========================================
+// CartItems - Temporary Cart
+// ===========================================
+
+model CartItem {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productId Int      @map("product_id")
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  quantity  Decimal  @db.Decimal(15, 3)
+  
+  // Selection
+  isSelected Boolean @default(true) @map("is_selected")
+  
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@unique([userId, productId])
+  @@map("cart_items")
+  @@index([userId])
+}
+
+// ===========================================
+// Partners - Partners from 1C
+// ===========================================
+
+model Partner {
+  id                 Int       @id @default(autoincrement())
+  guid1c             String?   @unique @map("guid_1c") @db.VarChar(50)
+  inn                String?   @db.VarChar(20)
+  kpp                String?   @db.VarChar(20)
+  nameFull           String    @map("name_full") @db.Text
+  nameShort          String?   @map("name_short") @db.VarChar(255)
+  addressLegal       String?   @map("address_legal") @db.Text
+  addressPostal      String?   @map("address_postal") @db.Text
+  phoneMain          String?   @map("phone_main") @db.VarChar(50)
+  phoneMobile        String?   @map("phone_mobile") @db.VarChar(50)
+  email              String?   @db.VarChar(255)
+  website            String?   @db.VarChar(255)
+  contactPerson      String?   @map("contact_person") @db.VarChar(255)
+  contactPosition    String?   @map("contact_position") @db.VarChar(100)
+
+  // Financial
+  balanceDebit       Decimal   @default(0) @map("balance_debit") @db.Decimal(15, 2)
+  balanceCredit      Decimal   @default(0) @map("balance_credit") @db.Decimal(15, 2)
+  discountPercent    Decimal   @default(0) @map("discount_percent") @db.Decimal(5, 2)
+  priceType1c        String?   @map("price_type_1c") @db.VarChar(50)
+
+  // 1C References
+  counterpartyGuid1c String?   @map("counterparty_guid_1c") @db.VarChar(50)
+  agreementGuid1c    String?   @map("agreement_guid_1c") @db.VarChar(50)
+
+  // Merged partners
+  mergedIntoId       Int?      @map("merged_into_id")
+  mergedInto         Partner?  @relation("MergedPartners", fields: [mergedIntoId], references: [id])
+  mergedPartners     Partner[] @relation("MergedPartners")
+  isMerged           Boolean   @default(false) @map("is_merged")
+
+  // Sync
+  lastSyncAt         DateTime? @map("last_sync_at") @db.Timestamptz
+  createdAt          DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt          DateTime  @updatedAt @map("updated_at") @db.Timestamptz
+
+  users              User[]
+  managers           UserManagedPartner[] // WebPartner/Sales Point Managers
+  orders             Order[]
+  mergeHistory       PartnerMergeHistory[] @relation("MergeHistoryPartner")
+  mergeHistoryAsTarget PartnerMergeHistory[] @relation("MergeHistoryTarget")
+
+  @@map("partners")
+  @@index([inn])
+  @@index([guid1c])
+  @@index([isMerged])
+}
+
+// ===========================================
+// UserManagedPartner - Link table
+// ===========================================
+
+model UserManagedPartner {
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    Int      @map("user_id")
+  partner   Partner  @relation(fields: [partnerId], references: [id], onDelete: Cascade)
+  partnerId Int      @map("partner_id")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+
+  @@id([userId, partnerId])
+  @@map("user_managed_partners")
+  @@index([userId])
+  @@index([partnerId])
+}
+
+// ===========================================
+// Partner Merge History
+// ===========================================
+
+model PartnerMergeHistory {
+  id             Int       @id @default(autoincrement())
+  sourcePartner  Partner   @relation("MergeHistoryPartner", fields: [sourcePartnerId], references: [id])
+  sourcePartnerId Int      @map("source_partner_id")
+  targetPartner  Partner   @relation("MergeHistoryTarget", fields: [targetPartnerId], references: [id])
+  targetPartnerId Int      @map("target_partner_id")
+  mergedBy       User?     @relation("MergeHistoryUser", fields: [mergedById], references: [id])
+  mergedById     Int?      @map("merged_by")
+  mergedAt       DateTime  @default(now()) @map("merged_at") @db.Timestamptz
+  reason         String?   @db.Text
+
+  @@map("partner_merge_history")
+  @@index([sourcePartnerId])
+  @@index([targetPartnerId])
+}
+
+// ===========================================
+// Product Groups - Categories from 1C
+// ===========================================
+
+model ProductGroup {
+  id          Int       @id @default(autoincrement())
+  guid1c      String    @unique @map("guid_1c") @db.VarChar(50)
+  parentId    Int?      @map("parent_id")
+  parent      ProductGroup? @relation("ProductGroupTree", fields: [parentId], references: [id])
+  children    ProductGroup[] @relation("ProductGroupTree")
+  name1c      String    @map("name_1c") @db.VarChar(255)
+  nameWeb     String?   @map("name_web") @db.VarChar(255)
+  description String?   @db.Text
+  sortOrder   Int       @default(0) @map("sort_order")
+  imageUrl    String?   @map("image_url") @db.VarChar(500)
+  isActive    Boolean   @default(true) @map("is_active")
+  path        String?   @db.VarChar(500)
+  depth       Int       @default(0)
+  createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt   DateTime  @updatedAt @map("updated_at") @db.Timestamptz
+
+  products    Product[]
+
+  @@map("product_groups")
+  @@index([guid1c])
+  @@index([parentId])
+  @@index([path])
+}
+
+// ===========================================
+// Products - Products from 1C
+// ===========================================
+
+model Product {
+  id              Int       @id @default(autoincrement())
+  guid1c          String    @unique @map("guid_1c") @db.VarChar(50)
+  article         String?   @db.VarChar(100)
+  name            String    @db.VarChar(500)
+  nameFull        String?   @map("name_full") @db.Text
+  description     String?   @db.Text
+  descriptionShort String?  @map("description_short") @db.VarChar(500)
+
+  // Group reference
+  groupId         Int?      @map("group_id")
+  group           ProductGroup? @relation(fields: [groupId], references: [id])
+
+  // Units
+  baseUnit1c      String?   @map("base_unit_1c") @db.VarChar(50)
+  baseUnitName    String?   @map("base_unit_name") @db.VarChar(100)
+
+  // Prices (cached from 1C)
+  purchasePrice   Decimal?  @map("purchase_price") @db.Decimal(15, 2)
+  retailPrice     Decimal?  @map("retail_price") @db.Decimal(15, 2)
+  wholesalePrice  Decimal?  @map("wholesale_price") @db.Decimal(15, 2)
+  priceCurrency   String    @default("RUB") @map("price_currency") @db.VarChar(10)
+
+  // Dimensions & Weight
+  length          Decimal?  @db.Decimal(10, 2)
+  width           Decimal?  @db.Decimal(10, 2)
+  height          Decimal?  @db.Decimal(10, 2)
+  weight          Decimal?  @db.Decimal(10, 2)
+
+  // Flags
+  isActive        Boolean   @default(true) @map("is_active")
+  isService       Boolean   @default(false) @map("is_service")
+  isMarked        Boolean   @default(false) @map("is_marked")
+
+  // SEO
+  slug            String?   @db.VarChar(500)
+  metaTitle       String?   @map("meta_title") @db.VarChar(255)
+  metaDescription String?   @map("meta_description") @db.Text
+
+  // Sync
+  lastSyncAt      DateTime? @map("last_sync_at") @db.Timestamptz
+  createdAt       DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt       DateTime  @updatedAt @map("updated_at") @db.Timestamptz
+
+  images          ProductImage[]
+  stocks          ProductStock[]
+  reservations    ProductReservation[]
+  orderItems      OrderItem[]
+  cartItems       CartItem[]
+
+  @@map("products")
+  @@index([guid1c])
+  @@index([groupId])
+  @@index([article])
+  @@index([isActive])
+  @@index([slug])
+}
+
+// ===========================================
+// Product Images
+// ===========================================
+
+model ProductImage {
+  id              Int       @id @default(autoincrement())
+  productId       Int       @map("product_id")
+  product         Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
+  guid1c          String?   @map("guid_1c") @db.VarChar(50)
+
+  // Stored locally
+  filename        String    @db.VarChar(255)
+  originalFilename String?  @map("original_filename") @db.VarChar(255)
+  filePath        String    @map("file_path") @db.VarChar(500)
+  fileUrl         String    @map("file_url") @db.VarChar(500)
+  mimeType        String?   @map("mime_type") @db.VarChar(100)
+  fileSize        Int?      @map("file_size")
+
+  // Image metadata
+  width           Int?
+  height          Int?
+
+  // Display
+  sortOrder       Int       @default(0) @map("sort_order")
+  isMain          Boolean   @default(false) @map("is_main")
+  altText         String?   @map("alt_text") @db.VarChar(255)
+
+  createdAt       DateTime  @default(now()) @map("created_at") @db.Timestamptz
+
+  @@map("product_images")
+  @@index([productId])
+  @@index([productId, isMain])
+}
+
+// ===========================================
+// Product Stocks
+// ===========================================
+
+model ProductStock {
+  id              Int       @id @default(autoincrement())
+  productId       Int       @map("product_id")
+  product         Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
+  warehouseGuid1c String?   @map("warehouse_guid_1c") @db.VarChar(50)
+  warehouseName   String?   @map("warehouse_name") @db.VarChar(255)
+
+  quantity        Decimal   @default(0) @db.Decimal(15, 3)
+  reserved        Decimal   @default(0) @db.Decimal(15, 3)
+  available       Decimal   @db.Decimal(15, 3) @ignore
+
+  priceType       String?   @map("price_type") @db.VarChar(50)
+
+  lastSyncAt      DateTime? @map("last_sync_at") @db.Timestamptz
+  createdAt       DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt       DateTime  @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@unique([productId, warehouseGuid1c, priceType])
+  @@map("product_stocks")
+  @@index([productId])
+  @@index([warehouseGuid1c])
+}
+
+// ===========================================
+// Product Reservations - Temporary Reservations
+// ===========================================
+
+model ProductReservation {
+  id              Int       @id @default(autoincrement())
+  orderId         Int?      @map("order_id")
+  order           Order?    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId       Int       @map("product_id")
+  product         Product   @relation(fields: [productId], references: [id])
+  warehouseGuid1c String?   @map("warehouse_guid_1c") @db.VarChar(50)
+
+  quantity        Decimal   @db.Decimal(15, 3)
+  status          String    @default("active") // active, confirmed, cancelled, expired
+  expiresAt       DateTime? @map("expires_at") @db.Timestamptz
+
+  createdAt       DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt       DateTime  @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@map("product_reservations")
+  @@index([orderId])
+  @@index([productId])
+  @@index([status])
+  @@index([expiresAt])
+}
+
+// ===========================================
+// Orders - Customer Orders (sync with 1C)
+// ===========================================
+
+model Order {
+  id                Int         @id @default(autoincrement())
+  guid1c            String?     @unique @map("guid_1c") @db.VarChar(50)
+  orderNumber1c     String?     @unique @map("order_number_1c") @db.VarChar(50)
+  orderNumberWeb    String?     @unique @map("order_number_web") @db.VarChar(50)
+
+  // Partner & User
+  partnerId         Int?        @map("partner_id")
+  partner           Partner?    @relation(fields: [partnerId], references: [id])
+  userId            Int?        @map("user_id")
+  user              User?       @relation(fields: [userId], references: [id])
+
+  // Order Info
+  status            OrderStatus @default(new)
+  orderDate         DateTime?   @map("order_date") @db.Date
+  realizationDate   DateTime?   @map("realization_date") @db.Date
+
+  // Delivery
+  deliveryAddress   String?     @map("delivery_address") @db.Text
+  deliveryDate      DateTime?   @map("delivery_date") @db.Date
+  deliveryMethod    String?     @map("delivery_method") @db.VarChar(50)
+
+  // Financial
+  totalAmount       Decimal     @map("total_amount") @db.Decimal(15, 2)
+  discountAmount    Decimal?    @map("discount_amount") @db.Decimal(15, 2)
+  paidAmount        Decimal?    @map("paid_amount") @db.Decimal(15, 2)
+  currency          String      @default("RUB") @db.VarChar(10)
+
+  // Payment status
+  paymentStatus     String      @default("pending") @map("payment_status") @db.VarChar(20)
+  paymentMethod     String?     @map("payment_method") @db.VarChar(50)
+
+  // 1C References
+  salesOrderGuid1c  String?     @map("sales_order_guid_1c") @db.VarChar(50)
+  realizationGuid1c String?     @map("realization_guid_1c") @db.VarChar(50)
+  agreementGuid1c   String?     @map("agreement_guid_1c") @db.VarChar(50)
+
+  // Additional
+  commentUser       String?     @map("comment_user") @db.Text
+  commentManager    String?     @map("comment_manager") @db.Text
+  trackingNumber    String?     @map("tracking_number") @db.VarChar(100)
+
+  // PDF generation
+  invoicePdfUrl     String?     @map("invoice_pdf_url") @db.VarChar(500)
+  invoiceUid        String?     @map("invoice_uid") @db.VarChar(100)
+
+  // Sync
+  lastSyncAt        DateTime?   @map("last_sync_at") @db.Timestamptz
+  syncError         String?     @map("sync_error") @db.Text
+
+  createdAt         DateTime    @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt         DateTime    @updatedAt @map("updated_at") @db.Timestamptz
+
+  items             OrderItem[]
+  history           OrderHistory[]
+  reservations      ProductReservation[]
+
+  @@map("orders")
+  @@index([guid1c])
+  @@index([orderNumber1c])
+  @@index([partnerId])
+  @@index([userId])
+  @@index([status])
+  @@index([orderDate])
+  @@index([orderNumberWeb])
+}
+
+// ===========================================
+// Order Items
+// ===========================================
+
+model OrderItem {
+  id              Int       @id @default(autoincrement())
+  orderId         Int       @map("order_id")
+  order           Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId       Int?      @map("product_id")
+  product         Product?  @relation(fields: [productId], references: [id])
+
+  // Product snapshot at order time
+  productName     String    @map("product_name") @db.VarChar(500)
+  productArticle  String?   @map("product_article") @db.VarChar(100)
+  productGuid1c   String?   @map("product_guid_1c") @db.VarChar(50)
+
+  quantity        Decimal   @db.Decimal(15, 3)
+  unit            String?   @db.VarChar(50)
+  price           Decimal   @db.Decimal(15, 2)
+  discountPercent Decimal   @default(0) @map("discount_percent") @db.Decimal(5, 2)
+  total           Decimal   @db.Decimal(15, 2)
+
+  // 1C
+  nomenclatureGuid1c String? @map("nomenclature_guid_1c") @db.VarChar(50)
+
+  createdAt       DateTime  @default(now()) @map("created_at") @db.Timestamptz
+
+  @@map("order_items")
+  @@index([orderId])
+  @@index([productId])
+}
+
+// ===========================================
+// Order History - Status Changes
+// ===========================================
+
+model OrderHistory {
+  id            Int       @id @default(autoincrement())
+  orderId       Int       @map("order_id")
+  order         Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  statusFrom    String?   @map("status_from") @db.VarChar(50)
+  statusTo      String    @map("status_to") @db.VarChar(50)
+
+  changedBy     Int?      @map("changed_by")
+  changedByUser User?     @relation(fields: [changedBy], references: [id])
+  changedByRole UserRole? @map("changed_by_role")
+
+  comment       String?   @db.Text
+
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz
+
+  @@map("order_history")
+  @@index([orderId])
+  @@index([createdAt])
+}
+
+// ===========================================
+// Sync Logs
+// ===========================================
+
+model SyncLog {
+  id            Int         @id @default(autoincrement())
+  syncSessionId String?     @map("sync_session_id") @db.VarChar(100)
+  syncSession   SyncSession? @relation(fields: [syncSessionId], references: [sessionUuid])
+
+  entityType    String      @map("entity_type") @db.VarChar(50)
+  entityId      String      @map("entity_id") @db.VarChar(100)
+  entityGuid1c  String?     @map("entity_guid_1c") @db.VarChar(50)
+
+  operation     SyncOperation
+  status        SyncStatus  @default(pending)
+
+  requestData   Json?       @map("request_data")
+  responseData  Json?       @map("response_data")
+  errorMessage  String?     @map("error_message") @db.Text
+  errorDetails  Json?       @map("error_details")
+
+  durationMs    Int?        @map("duration_ms")
+
+  createdAt     DateTime    @default(now()) @map("created_at") @db.Timestamptz
+  processedAt   DateTime?   @map("processed_at") @db.Timestamptz
+
+  @@map("sync_logs")
+  @@index([syncSessionId])
+  @@index([entityType, entityId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// ===========================================
+// Sync Sessions
+// ===========================================
+
+model SyncSession {
+  id             Int         @id @default(autoincrement())
+  sessionUuid    String      @unique @default(dbgenerated("uuid_generate_v4()")) @db.Uuid @map("session_uuid")
+
+  syncType       String      @map("sync_type") @db.VarChar(50)
+  status         SyncStatus  @default(pending)
+
+  startedAt      DateTime?   @map("started_at") @db.Timestamptz
+  completedAt    DateTime?   @map("completed_at") @db.Timestamptz
+
+  itemsProcessed Int         @default(0) @map("items_processed")
+  itemsTotal     Int         @default(0) @map("items_total")
+  itemsFailed    Int         @default(0) @map("items_failed")
+
+  errorMessage   String?     @map("error_message") @db.Text
+
+  createdBy      Int?        @map("created_by")
+  createdByUser  User?       @relation(fields: [createdBy], references: [id])
+
+  createdAt      DateTime    @default(now()) @map("created_at") @db.Timestamptz
+
+  syncLogs       SyncLog[]
+
+  @@map("sync_sessions")
+  @@index([sessionUuid])
+  @@index([status])
+  @@index([createdAt])
+}
+
+// ===========================================
+// API Keys
+// ===========================================
+
+model ApiKey {
+  id          Int       @id @default(autoincrement())
+  keyHash     String    @unique @map("key_hash") @db.VarChar(255)
+  keyPrefix   String    @map("key_prefix") @db.VarChar(20)
+
+  name        String?   @db.VarChar(255)
+  ownerId     Int?      @map("owner_id")
+  owner       User?     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+
+  permissions Json      @default("[]")
+  rateLimit   Int       @default(1000) @map("rate_limit")
+
+  lastUsedAt  DateTime? @map("last_used_at") @db.Timestamptz
+  expiresAt   DateTime? @map("expires_at") @db.Timestamptz
+
+  isActive    Boolean   @default(true) @map("is_active")
+
+  createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamptz
+
+  @@map("api_keys")
+  @@index([keyHash])
+  @@index([ownerId])
+}

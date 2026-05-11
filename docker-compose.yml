@@ -1,0 +1,130 @@
+services:
+  # Reverse Proxy - Caddy
+  caddy:
+    image: caddy:2.8-alpine
+    container_name: web1c-caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+    networks:
+      - web1c-network
+    restart: unless-stopped
+
+  # Next.js Application
+  app:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    container_name: web1c-app
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD:-web1c_secret}@db:5432/web1c
+      - REDIS_URL=redis://redis:6379
+      - ONEC_URL=${ONEC_URL:-http://1c-server:8080/hs/odata}
+      - ONEC_USER=${ONEC_USER}
+      - ONEC_PASSWORD=${ONEC_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET:-web1c_jwt_secret_key_change_in_production}
+      - APP_URL=http://localhost
+      - UPLOAD_DIR=/app/apps/web/uploads
+    volumes:
+      - ./apps/web/uploads:/app/apps/web/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - web1c-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Background Worker for Sync
+  worker:
+    build:
+      context: .
+      dockerfile: apps/worker/Dockerfile
+    container_name: web1c-worker
+    env_file:
+      - ./.env
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD:-web1c_secret}@db:5432/web1c
+      - REDIS_URL=redis://redis:6379
+      - ONEC_URL=${ONEC_URL:-http://1c-server:8080/hs/odata}
+      - ONEC_USER=${ONEC_USER}
+      - ONEC_PASSWORD=${ONEC_PASSWORD}
+      - APP_URL=http://app:3000
+      - UPLOAD_DIR=/app/apps/web/uploads
+    volumes:
+      - ./apps/web/uploads:/app/apps/web/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks:
+      - web1c-network
+    restart: unless-stopped
+
+  # PostgreSQL Database
+  db:
+    image: postgres:16-alpine
+    container_name: web1c-db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    environment:
+      - POSTGRES_DB=web1c
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-web1c_secret}
+    networks:
+      - web1c-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d web1c"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache & Queue
+  redis:
+    image: redis:7-alpine
+    container_name: web1c-redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    networks:
+      - web1c-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  caddy_data:
+    driver: local
+  caddy_config:
+    driver: local
+  app_uploads:
+    driver: local
+
+networks:
+  web1c-network:
+    driver: bridge
