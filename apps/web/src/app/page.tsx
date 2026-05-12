@@ -1,5 +1,9 @@
-import { Container, Title, Text, Card, Group, Button, SimpleGrid, Badge } from '@mantine/core';
-import { IconUsers, IconPackage, IconShoppingCart, IconFileText } from '@tabler/icons-react';
+import { Container, Title, Text, Card, Group, Button, SimpleGrid, Badge, Stack, Box } from '@mantine/core';
+import { 
+  IconUsers, IconPackage, IconShoppingCart, IconFileText, 
+  IconHeart, IconBell, IconCompare, IconFilter, IconClock,
+  IconCreditCard, IconTrendingUp, IconStar
+} from '@tabler/icons-react';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -13,6 +17,7 @@ export default function HomePage() {
         Многопользовательская платформа с синхронизацией товаров, заказов и партнёров с 1С:УТ 11.5
       </Text>
 
+      {/* Основные возможности */}
       <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="lg" mb="xl">
         <Card shadow="sm" padding="lg" withBorder>
           <Group justify="center" mb="md">
@@ -55,7 +60,41 @@ export default function HomePage() {
         </Card>
       </SimpleGrid>
 
-      <Card shadow="md" padding="xl" withBorder>
+      {/* Новые улучшения UX */}
+      <Card shadow="md" padding="xl" withBorder mb="xl">
+        <Title order={2} mb="md">🎉 Новые возможности пользовательского интерфейса</Title>
+        
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg" mb="lg">
+          {/* Товары */}
+          <Box>
+            <Title order={3} mb="sm">🛍️ Улучшенный каталог</Title>
+            <Stack gap="xs">
+              <Badge leftSection={<IconHeart size={14} />} variant="light" size="lg">Избранное</Badge>
+              <Badge leftSection={<IconBell size={14} />} variant="light" size="lg">Подписка на наличие</Badge>
+              <Badge leftSection={<IconCompare size={14} />} variant="light" size="lg">Сравнение товаров</Badge>
+              <Badge leftSection={<IconFilter size={14} />} variant="light" size="lg">Расширенные фильтры</Badge>
+              <Badge leftSection={<IconStar size={14} />} variant="light" size="lg">Рейтинги и отзывы</Badge>
+            </Stack>
+          </Box>
+
+          {/* Заказы */}
+          <Box>
+            <Title order={3} mb="sm">📦 Управление заказами</Title>
+            <Stack gap="xs">
+              <Badge leftSection={<IconClock size={14} />} variant="light" size="lg">Временная шкала</Badge>
+              <Badge leftSection={<IconTrendingUp size={14} />} variant="light" size="lg">Статистика заказов</Badge>
+              <Badge leftSection={<IconCreditCard size={14} />} variant="light" size="lg">Финансовый обзор</Badge>
+            </Stack>
+          </Box>
+        </SimpleGrid>
+
+        <Text c="dimmed" mt="lg" size="sm">
+          Все новые компоненты доступны в директории <code>src/components/</code> с подробной документацией
+        </Text>
+      </Card>
+
+      {/* Возможности системы */}
+      <Card shadow="md" padding="xl" withBorder mb="xl">
         <Title order={2} mb="md">Возможности системы</Title>
         
         <Group gap="sm" mb="lg">
